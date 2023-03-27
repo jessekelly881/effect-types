@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@changesets/cli': ^2.26.0
+  '@effect/data': ^0.7.1
+  '@effect/schema': ^0.6.0
   husky: ^8.0.3
   tsup: ^6.6.3
   typescript: ^4.9.5
@@ -9,6 +11,8 @@ specifiers:
 
 devDependencies:
   '@changesets/cli': 2.26.0
+  '@effect/data': 0.7.1
+  '@effect/schema': 0.6.0
   husky: 8.0.3
   tsup: 6.6.3_typescript@4.9.5
   typescript: 4.9.5
@@ -226,6 +230,28 @@ packages:
       fs-extra: 7.0.1
       human-id: 1.0.2
       prettier: 2.8.4
+    dev: true
+
+  /@effect/data/0.6.0:
+    resolution: {integrity: sha512-YMdFrQPd7jDxejmNKDDrZnjSzbM+RY3dPJ94VYMDNOYBdcQTj61kk5C/HUdddlbNdI5ukiSWO1CaZlnVU9gPLA==}
+    dev: true
+
+  /@effect/data/0.7.1:
+    resolution: {integrity: sha512-nIovYR9vSX0s+YKsMfvYDlFvkdGhUGYFoll/zRbbLVTwZ0S0h9zlsKgSyyQKRcar4fd/H01xuiS39MzmY1+uyA==}
+    dev: true
+
+  /@effect/io/0.13.0:
+    resolution: {integrity: sha512-SMOcsqn16Y/Xnf6ELfYQdEPp7yG5C19GByJzaD+okt6qSsb6Z1jWuE2+LzuqqKAESfaEUkHC1hnBmBUnXm1r2w==}
+    dependencies:
+      '@effect/data': 0.6.0
+    dev: true
+
+  /@effect/schema/0.6.0:
+    resolution: {integrity: sha512-frpEeHu8VRohApc160xURhpFFydLbBpPnNOsXYbwqgPWMhYw7UjeN8ZIeW/Y6E1OSPtAENLAMsa/Ni4Cy+emvg==}
+    dependencies:
+      '@effect/data': 0.6.0
+      '@effect/io': 0.13.0
+      fast-check: 3.7.1
     dev: true
 
   /@esbuild/android-arm/0.17.11:
@@ -1091,6 +1117,13 @@ packages:
       chardet: 0.7.0
       iconv-lite: 0.4.24
       tmp: 0.0.33
+    dev: true
+
+  /fast-check/3.7.1:
+    resolution: {integrity: sha512-d63EsxP1eedA+x94xNxIpTWtBShq95KL6ZSrKTD0Pp1lPASmajAaDHJ71c5ebwZ+vBzlTt3AOalcAnBzL7PQ6Q==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      pure-rand: 6.0.1
     dev: true
 
   /fast-glob/3.2.12:
@@ -2006,6 +2039,10 @@ packages:
   /punycode/2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
+    dev: true
+
+  /pure-rand/6.0.1:
+    resolution: {integrity: sha512-t+x1zEHDjBwkDGY5v5ApnZ/utcd4XYDiJsaQQoptTXgUXX95sDg1elCdJghzicm7n2mbCBJ3uYWr6M22SO19rg==}
     dev: true
 
   /queue-microtask/1.2.3:
