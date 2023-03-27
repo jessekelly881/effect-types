@@ -20,4 +20,7 @@ export const i16 = i(16);
 export const i32 = i(32);
 export const i64 = i(64);
 
-const safe = pipe(S.number, S.between(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER));
+export const safe = S.between(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
+
+export const latitude = S.between(-90, 90);
+export const longitude = S.between(-180, 180);
