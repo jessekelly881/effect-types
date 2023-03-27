@@ -1,6 +1,6 @@
 {
-  "name": "@kellyjesse881/empty",
-  "version": "0.0.4",
+  "name": "effect-types",
+  "version": "0.0.1",
   "description": "",
   "private": false,
   "main": "./dist/index.js",
