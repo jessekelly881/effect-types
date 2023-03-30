@@ -11,13 +11,13 @@ function toCamelCase(str: string): string {
     return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
 }
 
-const mapCamelCaseDeep = <A>(a: A): CamelCaseDeep<A> => {
+const mapCamelCase = <A>(a: A): CamelCaseDeep<A> => {
   if(typeof a === "object") {
     if(Array.isArray(a)) {
-      return a.map(mapCamelCaseDeep) as any
+      return a.map(mapCamelCase) as any
     } else {
       return Object.fromEntries(
-        Object.entries(a).map(([k, v]) => [toCamelCase(k), mapCamelCaseDeep(v)])
+        Object.entries(a).map(([k, v]) => [toCamelCase(k), mapCamelCase(v)])
       ) as any
     }
   }
@@ -25,7 +25,7 @@ const mapCamelCaseDeep = <A>(a: A): CamelCaseDeep<A> => {
   return a as any;
 }
 
-const _camelCaseDeep = (ast: AST.AST): AST.AST => {
+const _camelCase = (ast: AST.AST): AST.AST => {
   switch (ast._tag) {
     case "Tuple":
       return AST.createTuple(
@@ -41,9 +41,9 @@ const _camelCaseDeep = (ast: AST.AST): AST.AST => {
         ast.indexSignatures
       )
     case "Union":
-      return AST.createUnion(ast.types.map((member) => _camelCaseDeep(member)))
+      return AST.createUnion(ast.types.map((member) => _camelCase(member)))
     case "Lazy":
-      return AST.createLazy(() => _camelCaseDeep(ast.f()))
+      return AST.createLazy(() => _camelCase(ast.f()))
     default:
       return ast
   }
@@ -51,6 +51,9 @@ const _camelCaseDeep = (ast: AST.AST): AST.AST => {
 
 /*
  * Maps the keys of an object to camelCase. E.g. { a_b: 1 } => { aB: 1 }
+ *
+ * @since 1.0.0
+ * @category transformers
  */
-export const camelCaseDeep = <A, I>(self: S.Schema<I, A>): S.Schema<I, CamelCaseDeep<A>> =>
-  S.transform(self, S.make(_camelCaseDeep(self.ast)), (self) => mapCamelCaseDeep(self), identity);
+export const camelCase = <A, I>(self: S.Schema<I, A>): S.Schema<I, CamelCaseDeep<A>> =>
+  S.transform(self, S.make(_camelCase(self.ast)), (self) => mapCamelCase(self), identity);
