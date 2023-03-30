@@ -25,7 +25,7 @@ const mapCamelCaseDeep = <A>(a: A): CamelCaseDeep<A> => {
   return a as any;
 }
 
-export const _camelCaseDeep = (ast: AST.AST): AST.AST => {
+const _camelCaseDeep = (ast: AST.AST): AST.AST => {
   switch (ast._tag) {
     case "Tuple":
       return AST.createTuple(
@@ -49,5 +49,8 @@ export const _camelCaseDeep = (ast: AST.AST): AST.AST => {
   }
 }
 
+/*
+ * Maps the keys of an object to camelCase. E.g. { a_b: 1 } => { aB: 1 }
+ */
 export const camelCaseDeep = <A, I>(self: S.Schema<I, A>): S.Schema<I, CamelCaseDeep<A>> =>
   S.transform(self, S.make(_camelCaseDeep(self.ast)), (self) => mapCamelCaseDeep(self), identity);
