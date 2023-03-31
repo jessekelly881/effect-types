@@ -45,4 +45,32 @@ describe("Struct", () => {
         expect(p({ a_b: { c_d: { e_f: 1 } } })).toEqual({ aB: { cD: { eF: 1 } } })
     })
 
+    it("snakeCase/ struct", () => {
+        const schema = _.snakeCase(S.struct({ aB: S.number }))
+        const p = S.parse(schema)
+
+        expect(p({ aB: 1 })).toEqual({ "a_b": 1 })
+    })
+
+    it("snakeCase/ struct in tuple", () => {
+        const schema = _.snakeCase(S.tuple(S.struct({ aB: S.number })))
+        const p = S.parse(schema)
+
+        expect(p([{ aB: 1 }])).toEqual([{ "a_b": 1 }])
+    })
+
+    it("snakeCase/ deep struct", () => {
+        const schema = _.snakeCase(S.struct({
+            aB: S.struct({
+                "c-d": S.struct({
+                    "e_f": S.number
+                })
+            })
+        }))
+
+        const p = S.parse(schema)
+
+        expect(p({ aB: { "c-d": { "e_f": 1 } } })).toEqual({ "a_b": { "c_d": { "e_f": 1 } } })
+    })
+
 })
