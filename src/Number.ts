@@ -12,28 +12,24 @@ const unsignedMax = (n: number) => 2 ** n - 1;
 const u = (n: number) =>
   flow(
     S.int(),
-    S.between(0, unsignedMax(n)),
-    S.annotations({
+    S.between(0, unsignedMax(n), {
       message: () => `an unsigned ${n} bit integer`,
       identifier: `U${n}`,
-      jsonSchema: { type: "integer", minimum: 0, maximum: unsignedMax(n) },
       description: `An unsigned ${n} bit integer`,
     })
-  );
+  )
 
 const signedMin = (n: number) => -(2 ** (n - 1));
 const signedMax = (n: number) => 2 ** (n - 1) - 1;
 
 const i = (n: number) => flow(
     S.int(), 
-    S.between(signedMin(n), signedMax(n)),
-    S.annotations({
+    S.between(signedMin(n), signedMax(n), {
       message: () => `a signed ${n} bit integer`,
       identifier: `I${n}`,
-      jsonSchema: { type: "integer", minimum: signedMin(n), maximum: signedMax(n) },
       description: `A signed ${n} bit integer`,
-    })
-);
+    }
+));
 
 /*
  * An unsigned 8 bit integer
