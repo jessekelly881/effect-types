@@ -2,7 +2,7 @@ import * as S from "@effect/schema/Schema";
 import * as A from "@effect/data/ReadonlyArray";
 import * as Str from "@effect/data/String";
 import * as PR from "@effect/schema/ParseResult"
-import { pipe } from "@effect/data/Function";
+import { identity, pipe } from "@effect/data/Function";
 
 const truthyValues = ["1", "true", "yes", "on", "ok"];
 const falsyValues = ["0", "false", "no", "off"];
@@ -29,3 +29,11 @@ export const parseFuzzy = <I>(self: S.Schema<I, string>): S.Schema<I, boolean> =
   );
   return schema
 }
+
+export const not = <I>(self: S.Schema<I, boolean>): S.Schema<I, boolean> =>
+    S.transform(
+      self,
+      S.to(self),
+      (self) => !self,
+      (self) => !self,
+    )
