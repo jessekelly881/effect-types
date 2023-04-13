@@ -2,6 +2,16 @@
  * @since 1.0.0
  */
 
+export const mapKeys = (fn: (_: string) => string) => <A, R>(a: A): R => {
+  if (typeof a === "object" && !Array.isArray(a)) {
+    return Object.fromEntries(
+      Object.entries(a).map(([k, v]) => [fn(k), v])
+    ) as any;
+  }
+
+  return a as any;
+}
+
 /* @internal */
 export const mapKeysDeep = (fn: (_: string) => string) => <A, R>(a: A): R => {
   if(typeof a === "object") {
