@@ -230,31 +230,26 @@
     human-id "^1.0.2"
     prettier "^2.7.1"
 
-"@effect/data@^0.6.0", "@effect/data@~0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@effect/data/-/data-0.6.0.tgz#1a1056449157825dd545a3fc7b5819ab37a21c1c"
-  integrity sha512-YMdFrQPd7jDxejmNKDDrZnjSzbM+RY3dPJ94VYMDNOYBdcQTj61kk5C/HUdddlbNdI5ukiSWO1CaZlnVU9gPLA==
+"@effect/data@^0.12.2", "@effect/data@~0.12.2":
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/@effect/data/-/data-0.12.2.tgz#c76ce6e9f92484e77f184f3392724f7729f6467d"
+  integrity sha512-bmWRTcsSRG1FlBswT+D8SxW6r3c4B3pKJrjYfitCD03tXHnup5gLHaWqbFgIjiyYITS+UsJRRjVrNxvyGG4ZNQ==
 
-"@effect/data@^0.7.4":
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/@effect/data/-/data-0.7.4.tgz#53d6006f66e048b7eaa208c3a4de8b1d058a59bd"
-  integrity sha512-vHDyTq66H5JIFMysp11KawygR7ikc2do5FdRdvruLN4H6hFW7u404Bl/UVOu4MiKugHvV1MUaV2fy/dzOlwY7w==
+"@effect/io@^0.21.0":
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/@effect/io/-/io-0.21.0.tgz#5dcb26fabbb5d4c977cb67638e25ded7aa55d63c"
+  integrity sha512-tLusLlTB7zxV+3PW+BqM2agw5jeEp3fyci/lwjWvENOKlY8CrZw+6R8og93Dn3gl/J3tYrGzAUpNJfE4vPN+Ng==
+  dependencies:
+    "@effect/data" "~0.12.2"
 
-"@effect/io@^0.13.0":
+"@effect/schema@^0.13.0":
   version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@effect/io/-/io-0.13.0.tgz#fee7ef16a7b2b8734dc5a952d659afcb494d4b27"
-  integrity sha512-SMOcsqn16Y/Xnf6ELfYQdEPp7yG5C19GByJzaD+okt6qSsb6Z1jWuE2+LzuqqKAESfaEUkHC1hnBmBUnXm1r2w==
+  resolved "https://registry.yarnpkg.com/@effect/schema/-/schema-0.13.0.tgz#15df3f9726e6c86a288a07bac4e4a1e3bdb43951"
+  integrity sha512-QKaTYBS4ljGzEGacbfiQNcIJjowc51DaD2GdGARr0+jgg1N9VenQbuzAIv5EwmRVREZ4DbkGWDAWSs56i79Z+Q==
   dependencies:
-    "@effect/data" "~0.6.0"
-
-"@effect/schema@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@effect/schema/-/schema-0.6.0.tgz#b36b72489fadca20fa929e68e09eafcf5624dbfd"
-  integrity sha512-frpEeHu8VRohApc160xURhpFFydLbBpPnNOsXYbwqgPWMhYw7UjeN8ZIeW/Y6E1OSPtAENLAMsa/Ni4Cy+emvg==
-  dependencies:
-    "@effect/data" "^0.6.0"
-    "@effect/io" "^0.13.0"
-    fast-check "^3.7.1"
+    "@effect/data" "^0.12.2"
+    "@effect/io" "^0.21.0"
+    fast-check "^3.8.0"
 
 "@esbuild/android-arm64@0.17.14":
   version "0.17.14"
@@ -1077,7 +1072,7 @@ external-editor@^3.1.0:
     iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
-fast-check@^3.7.1:
+fast-check@^3.7.1, fast-check@^3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/fast-check/-/fast-check-3.8.0.tgz#43a6367db76c2bc1a1976e9898e1e6a4acfbac26"
   integrity sha512-Mz6k/+bton0iMXdIaqG/ow81oUCYxIDtmGUvf1Q/9O5QhiLI6T9JaCNEr4Y6LfMOpY/jBUfo8hK+3qd5sGfTfw==
@@ -2299,6 +2294,11 @@ source-map@^0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+source-map@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.4.tgz#a9bbe705c9d8846f4e08ff6765acf0f1b0898656"
+  integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
+
 spawndamnit@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/spawndamnit/-/spawndamnit-2.0.0.tgz#9f762ac5c3476abb994b42ad592b5ad22bb4b0ad"
@@ -2647,7 +2647,7 @@ vite-node@0.30.1:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitest@0.30.1:
+vitest@^0.30.1:
   version "0.30.1"
   resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.30.1.tgz#351d4a2f27aa8cc0245e3583e3ed45e30efc71d6"
   integrity sha512-y35WTrSTlTxfMLttgQk4rHcaDkbHQwDP++SNwPb+7H8yb13Q3cu2EixrtHzF27iZ8v0XCciSsLg00RkPAzB/aA==

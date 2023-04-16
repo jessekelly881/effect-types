@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import * as S from "@effect/schema/Schema";
 import { pipe } from "@effect/data/Function"
 import * as _ from "../src/Struct";
+import * as I from "../src/internal"
 
 describe("Struct", () => {
     it("mapKeyNames / s", () => {
@@ -12,8 +13,15 @@ describe("Struct", () => {
         
         expect(() => p({})).toThrow()
         expect(p({ b: "1" })).toEqual({ a: "1" })
-        expect(d({ b: "1" })).toEqual({ a: "1" })
-        expect(e({ a: "1"})).toEqual({ a: "1" })
+    })
+
+    it("mapKeyNames/ composed", () => {
+        const s = pipe(S.struct({ x: S.string }), _.mapKeyNames(() => "a"), _.mapKeyNames(() => "b"))
+        const p = S.parse(s);
+        
+        expect(pipe({ x: 1 }, I.mapKeys(() => "a"), I.mapKeys(() => "b"))).toEqual({ b: 1 })
+        expect(() => p({})).toThrow()
+        expect(p({ x: "1" })).toEqual({ b: "1" })
     })
 
     it("mapKeyNames / s > s", () => {
@@ -24,9 +32,6 @@ describe("Struct", () => {
         
         expect(() => p({})).toThrow()
         expect(p({ b: { inner: 1 } })).toEqual({ a: { inner: 1 } })
-
-        expect(d({ b: { inner: 1 } })).toEqual({ a: { inner: 1 } })
-        expect(e({ a: { inner: 1 } })).toEqual({ a: { inner: 1 } })
     })
 
     it("camelCase / s", () => {
@@ -43,5 +48,13 @@ describe("Struct", () => {
         S.getPropertySignatures(S.to(s)).aB
 
         expect(p({ a_b: { a_b: "test" }})).toEqual({ "aB": { a_b: "test" } })
+    })
+
+    it("lowercase / s", () => {
+        const s = pipe(S.struct({ NODE_ENV: S.string }), _.lowercase(), _.camelCase());
+        const p = S.parse(s);
+
+        expect(p({ NODE_ENV: "env" })).toEqual({ nodeEnv: "env" })
+
     })
 })
