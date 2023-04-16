@@ -15,6 +15,20 @@ describe("Struct", () => {
         expect(p({ b: "1" })).toEqual({ a: "1" })
     })
 
+    it("mapKeyNames/ union", () => {
+        const s = pipe(S.union(
+            S.struct({ tag: S.literal("a"), a_val: S.string }), 
+            S.struct({ tag: S.literal("b"), b_val: S.string })
+        ),
+            _.camelCase()
+        )
+
+        const p = S.parse(s);
+        
+        expect(p({ tag: "a", a_val: "val" })).toEqual({ tag: "a", aVal: "val" })
+        expect(p({ tag: "b", b_val: "val" })).toEqual({ tag: "b", bVal: "val" })
+    })
+
     it("mapKeyNames/ composed", () => {
         const s = pipe(S.struct({ x: S.string }), _.mapKeyNames(() => "a"), _.mapKeyNames(() => "b"))
         const p = S.parse(s);
