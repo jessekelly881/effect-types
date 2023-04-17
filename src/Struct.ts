@@ -56,10 +56,10 @@ export const mapKeyNames = <A, B>(map: (_: string) => string) =>
  * Maps the key names of an object to camelCase
  * @since 1.0.0
  */
-export const camelCase = <A>() => mapKeyNames<A, CamelCase<A>>(I.camelCase)
+export const camelCaseKeys = <A>() => mapKeyNames<A, CamelCase<A>>(I.camelCase)
 
 /**
  * Lowercases the key names of an object
  * @since 1.0.0
  */
-export const lowercase = <A>() => mapKeyNames<A, Lowercase<A>>(I.lowercase)
+export const lowercaseKeys = <A>() => mapKeyNames<A, Lowercase<A>>(I.lowercase)

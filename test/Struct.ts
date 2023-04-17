@@ -20,7 +20,7 @@ describe("Struct", () => {
             S.struct({ tag: S.literal("a"), a_val: S.string }), 
             S.struct({ tag: S.literal("b"), b_val: S.string })
         ),
-            _.camelCase()
+            _.camelCaseKeys()
         )
 
         const p = S.parse(s);
@@ -49,7 +49,7 @@ describe("Struct", () => {
     })
 
     it("camelCase / s", () => {
-        const s = pipe(S.struct({ a_b: S.string }), _.camelCase())
+        const s = pipe(S.struct({ a_b: S.string }), _.camelCaseKeys())
         const p = S.parse(s);
         S.getPropertySignatures(S.to(s)).aB
 
@@ -57,7 +57,7 @@ describe("Struct", () => {
     })
 
     it("camelCase / s > s", () => {
-        const s = pipe(S.struct({ a_b: S.struct({ a_b: S.string }) }), _.camelCase())
+        const s = pipe(S.struct({ a_b: S.struct({ a_b: S.string }) }), _.camelCaseKeys())
         const p = S.parse(s);
         S.getPropertySignatures(S.to(s)).aB
 
@@ -65,10 +65,9 @@ describe("Struct", () => {
     })
 
     it("lowercase / s", () => {
-        const s = pipe(S.struct({ NODE_ENV: S.string }), _.lowercase(), _.camelCase());
+        const s = pipe(S.struct({ NODE_ENV: S.string }), _.lowercaseKeys(), _.camelCaseKeys());
         const p = S.parse(s);
 
         expect(p({ NODE_ENV: "env" })).toEqual({ nodeEnv: "env" })
-
     })
 })
