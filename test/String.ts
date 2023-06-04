@@ -5,7 +5,7 @@ import * as _ from "../src/String";
 
 describe("String", () => {
     it("hex", () => {
-        const schema = pipe(S.string, _.hex());
+        const schema = pipe(S.string, _.hexadecimal());
         const p = S.parse(schema);
 
         expect(p("0xff")).toBe("0xff")

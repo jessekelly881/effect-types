@@ -18,15 +18,4 @@ describe("Boolean", () => {
         expect(parse("0")).toBe(false)
         expect(parse("false")).toBe(false)
     })
-
-    it("not", () => {
-        const schema = pipe(S.boolean, _.not)
-        const parse = S.parse(schema)
-        const encode = S.encode(schema)
-
-        expect(parse(true)).toBe(false)
-        expect(parse(false)).toBe(true)
-        expect(encode(true)).toBe(false)
-        expect(encode(false)).toBe(true)
-    })
 })

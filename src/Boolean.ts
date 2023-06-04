@@ -2,12 +2,12 @@ import * as S from "@effect/schema/Schema";
 import * as A from "@effect/data/ReadonlyArray";
 import * as Str from "@effect/data/String";
 import * as PR from "@effect/schema/ParseResult"
-import { identity, pipe } from "@effect/data/Function";
+
 
 const truthyValues = ["1", "true", "yes", "on", "ok"];
 const falsyValues = ["0", "false", "no", "off"];
 
-/*
+/**
  * Parses a boolean from a string using a predefined set of truthy and falsy values. E.g. "yes", "no", "on", "off", "1", "0"
  * @since 1.0.0 
  */
@@ -29,11 +29,3 @@ export const parseFuzzy = <I>(self: S.Schema<I, string>): S.Schema<I, boolean> =
   );
   return schema
 }
-
-export const not = <I>(self: S.Schema<I, boolean>): S.Schema<I, boolean> =>
-    S.transform(
-      self,
-      S.to(self),
-      (self) => !self,
-      (self) => !self,
-    )
