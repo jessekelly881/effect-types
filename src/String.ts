@@ -51,6 +51,30 @@ export type Hexadecimal = S.To<typeof Hexadecimal>
 
 
 /**
+ * @since 1.0.0
+ * @category filter
+ */
+export const octal = <A extends string>() => S.pattern<A>(/^(0o)?[0-7]+$/i, {
+  message: () => `a octal string`,
+  identifier: `Octal`,
+  description: "A octal value",
+});
+
+/**
+ * @since 1.0.0
+ * @category datatype
+ */
+export const Octal = pipe(S.string, octal(), S.brand("Octal"));
+
+/**
+ * @since 1.0.0
+ * @category brand
+ */
+export type Octal = S.To<typeof Octal>
+
+
+
+/**
  * An md5 hash string
  * @since 1.0.0
  * @category filter
