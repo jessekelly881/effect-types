@@ -6,17 +6,18 @@ const unsignedMax = (n: number) => 2 ** n - 1;
 const signedMin = (n: number) => -(2 ** (n - 1));
 const signedMax = (n: number) => 2 ** (n - 1) - 1;
 
-const u = (n: number) =>
+const u = (n: number) => (annotations?: S.AnnotationOptions<number>) =>
   flow(
     S.int(),
     S.between(0, unsignedMax(n), {
       message: () => `an unsigned ${n} bit integer`,
       identifier: `U${n}`,
       description: `An unsigned ${n} bit integer`,
+      ...annotations
     })
   );
 
-const i = (n: number) =>
+const i = (n: number) => (annotations?: S.AnnotationOptions<number>) =>
   flow(
     S.int(),
     S.between(signedMin(n), signedMax(n), {
@@ -40,7 +41,7 @@ export const u8 = u(8);
  * @category datatypes
  * @since 1.0.0
  */
-export const U8 = pipe(S.number, u8, S.brand("U8"));
+export const U8 = pipe(S.number, u8(), S.brand("U8"));
 
 /**
  * @category brands
@@ -62,7 +63,7 @@ export const u16 = u(16);
  * @category datatypes
  * @since 1.0.0
  */
-export const U16 = pipe(S.number, u16, S.brand("U16"));
+export const U16 = pipe(S.number, u16(), S.brand("U16"));
 
 /**
  * @category brands
@@ -84,7 +85,7 @@ export const u32 = u(32);
  * @category datatypes
  * @since 1.0.0
  */
-export const U32 = pipe(S.number, u32, S.brand("U32"));
+export const U32 = pipe(S.number, u32(), S.brand("U32"));
 
 /**
  * @category brands
@@ -106,7 +107,7 @@ export const u64 = u(64);
  * @category datatypes
  * @since 1.0.0
  */
-export const U64 = pipe(S.number, u64, S.brand("U64"));
+export const U64 = pipe(S.number, u64(), S.brand("U64"));
 
 /**
  * @category brands
@@ -128,7 +129,7 @@ export const i8 = i(8);
  * @category datatypes
  * @since 1.0.0
  */
-export const I8 = pipe(S.number, i8, S.brand("I8"));
+export const I8 = pipe(S.number, i8(), S.brand("I8"));
 
 /**
  * @category brands
@@ -150,7 +151,7 @@ export const i16 = i(16);
  * @category datatypes
  * @since 1.0.0
  */
-export const I16 = pipe(S.number, i16, S.brand("I16"));
+export const I16 = pipe(S.number, i16(), S.brand("I16"));
 
 /**
  * @category brands
@@ -172,7 +173,7 @@ export const i32 = i(32);
  * @category datatypes
  * @since 1.0.0
  */
-export const I32 = pipe(S.number, i32, S.brand("I32"));
+export const I32 = pipe(S.number, i32(), S.brand("I32"));
 
 /**
  * @category brands
@@ -194,7 +195,7 @@ export const i64 = i(64);
  * @category datatypes
  * @since 1.0.0
  */
-export const I64 = pipe(S.number, i64, S.brand("I64"));
+export const I64 = pipe(S.number, i64(), S.brand("I64"));
 
 /**
  * @category brands

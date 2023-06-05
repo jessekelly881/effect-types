@@ -1,5 +1,6 @@
 import * as S from "@effect/schema/Schema";
 import { pipe } from "@effect/data/Function";
+import multilineRegexp from "./common";
 
 
 /**
@@ -71,6 +72,92 @@ export const Octal = pipe(S.string, octal(), S.brand("Octal"));
  * @category brand
  */
 export type Octal = S.To<typeof Octal>
+
+
+
+/**
+ * An uppercase string
+ * @since 1.0.0
+ * @category filter
+ */
+export const uppercase = <A extends string>() =>
+  S.filter<A>((s) => s === s.toUpperCase(), {
+    message: () => `an uppercase string`,
+    identifier: `Uppercase`,
+    description: "An uppercase string",
+  });
+
+/**
+ * An uppercase string
+ * @since 1.0.0
+ * @category datatype
+ */
+export const Uppercase = pipe(S.string, uppercase(), S.brand("Uppercase"));
+
+/**
+ * @since 1.0.0
+ * @category brand
+ */
+export type Uppercase = S.To<typeof Uppercase>
+
+
+
+const semVerRegex = multilineRegexp([
+  '^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)',
+  '(?:-((?:0|[1-9]\\d*|\\d*[a-z-][0-9a-z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-z-][0-9a-z-]*))*))',
+  '?(?:\\+([0-9a-z-]+(?:\\.[0-9a-z-]+)*))?$',
+], 'i');
+
+/**
+ * Semantic Version Number
+ * @since 1.0.0
+ * @category filter
+ */
+export const semVer = <A extends string>() => S.pattern<A>(semVerRegex, {
+  message: () => `a semver string`,
+  identifier: `Semver`,
+  description: "A semver",
+});
+
+/**
+ * Semantic Version Number
+ * @since 1.0.0
+ * @category datatype
+ */
+export const SemVer = pipe(S.string, semVer(), S.brand("SemVer"));
+
+/**
+ * @since 1.0.0
+ * @category brand
+ */
+export type SemVer = S.To<typeof SemVer>
+
+
+
+/**
+ * A lowercase string
+ * @since 1.0.0
+ * @category filter
+ */
+export const lowercase = <A extends string>() =>
+  S.filter<A>((s) => s === s.toLowerCase(), {
+    message: () => `a lowercase string`,
+    identifier: `Lowercase`,
+    description: "A lowercase string",
+  });
+
+/**
+ * A lowercase string
+ * @since 1.0.0
+ * @category datatype
+ */
+export const Lowercase = pipe(S.string, lowercase(), S.brand("Lowercase"));
+
+/**
+ * @since 1.0.0
+ * @category brand
+ */
+export type Lowercase = S.To<typeof Lowercase>
 
 
 

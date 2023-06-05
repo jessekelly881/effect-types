@@ -20,4 +20,10 @@ describe("String", () => {
         ['076543210', '0o01234567'], 
         ['abcdefg', '012345678', '012345670c', '00c12345670c', '', '..']
     ))
+
+    it("SemVer", () => testValues(
+        _.SemVer, 
+        ['0.0.4', '1.2.3', '10.20.30', '1.1.2-prerelease+meta', '1.1.2+meta', '1.1.2+meta-valid', '1.0.0-alpha', '1.0.0-beta'], 
+        ['alpha..', 'beta', '1.0.0-alpha_beta', '-alpha.', '1.0.0-alpha..', '1.0.0-alpha..1', '1.0.0-alpha...1']
+    ))
 })
