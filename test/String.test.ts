@@ -26,4 +26,33 @@ describe("String", () => {
         ['0.0.4', '1.2.3', '10.20.30', '1.1.2-prerelease+meta', '1.1.2+meta', '1.1.2+meta-valid', '1.0.0-alpha', '1.0.0-beta'], 
         ['alpha..', 'beta', '1.0.0-alpha_beta', '-alpha.', '1.0.0-alpha..', '1.0.0-alpha..1', '1.0.0-alpha...1']
     ))
+
+    it("Uppercase", () => testValues(
+        _.Uppercase, 
+        ['ABC', 'ABC123', 'ALL CAPS IS FUN.', '   .'], 
+        ['fooBar', '123abc']
+    ))
+
+    it("Lowercase", () => testValues(
+        _.Lowercase, 
+        ['abc', 'abc123', 'this is lowercase.', 'tr竪s 端ber'], 
+        ['fooBar', '123A']
+    ))
+
+    it("Cron", () => testValues(
+        _.Cron, 
+        [
+            "0 0 0 1 1 * 1",
+            "0 0 0 1 1 * 1,2",
+            "0 0 0 1 1 * 1,2,3",
+            "0 0 0 1 * * 1/4",
+            "0 0 0 * * 0 1-4",
+            "0 0 0 * * * 2/4",
+            "0 0 * * * * *",
+            "@annually",
+            "@yearly",
+            "@every 5s"
+        ], 
+        ["5ms", "0", "@today"]
+    ))
 })

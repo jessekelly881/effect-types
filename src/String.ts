@@ -161,26 +161,28 @@ export type Lowercase = S.To<typeof Lowercase>
 
 
 
+const cronRegex = /(@(annually|yearly|monthly|weekly|daily|hourly|reboot))|(@every (\d+(ns|us|µs|ms|s|m|h))+)|((((\d+,)+\d+|(\d+(\/|-)\d+)|\d+|\*) ?){5,7})/
+
 /**
- * An md5 hash string
+ * A cron string
  * @since 1.0.0
  * @category filter
  */
-export const md5 = <A extends string>() => S.pattern<A>(/^[a-f0-9]{32}$/, {
-  message: () => `a md5 hash`,
-  identifier: `MD5`,
-  description: "An md5 hash",
+export const cron = <A extends string>() => S.pattern<A>(cronRegex, {
+  message: () => `a cron string`,
+  identifier: `Cron`,
+  description: "A cron string",
 });
 
 /**
- * An md5 hash string
+ * A cron string
  * @since 1.0.0
  * @category datatype
  */
-export const MD5 = pipe(S.string, md5(), S.brand("MD5"));
+export const Cron = pipe(S.string, cron(), S.brand("Cron"));
 
 /**
  * @since 1.0.0
  * @category brand
  */
-export type MD5 = S.To<typeof MD5>
+export type Cron = S.To<typeof Cron>
