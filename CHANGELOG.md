@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- bb9e2fa: init
+
+## 0.0.4
+
+### Patch Changes
+
 - 897cf90: fixed tsconfig
 
 ## 0.0.3
