@@ -1,7 +1,11 @@
-# Effect schema extras
+# Effect types
 
 A collection of types, transforms, filters, compilers, and helpers for @effect/schema 
-organized by data type.
+organized by data type. Designed to be tightly integrated with other projects in the ecosystem.
+
+## Todo
+- Integrate with [effect-schema-compilers](https://github.com/jessekelly881/effect-schema-compilers) to include well defined compiler targets for each type. 
+- Extend collection of types. Currently using fakerjs and validatorjs for reference. 
 
 ## Types
 
@@ -56,3 +60,6 @@ organized by data type.
 
 ### Person
 - [x] Sex (male | female)
+
+## Credits
+This library depends heavily on the work done on the [validator.js](https://github.com/validatorjs/validator.js) project and while it is not a direct dependency of this project, a significant amount of code has been borrowed for validating string types. 
