@@ -7,27 +7,52 @@ organized by data type.
 
 ### Boolean
 
-#### parseFuzzy
-
-### Struct
-
-#### camelCaseDeep
-
-Maps the keys of a struct to camel case.
+- parseFuzzy: string -> boolean
 
 ### Number
 
-- u8: [0, 255]
-- u16: [0, 65535]
-- u32: [0, 4294967295]
-- u64: [0, 18446744073709551615]
+- [x] U8: [0, 255]
+- [x] U16: [0, 65535]
+- [x] U32: [0, 4294967295]
+- [x] U64: [0, 18446744073709551615]
 
-- i8: [-128, 127]
-- i16: [-32768, 32767]
-- i32: [-2147483648, 2147483647]
-- i64: [-9223372036854775808, 9223372036854775807]
+- [x] I8: [-128, 127]
+- [x] I16: [-32768, 32767]
+- [x] I32: [-2147483648, 2147483647]
+- [x] I64: [-9223372036854775808, 9223372036854775807]
 
-- safe: [-Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER]
+- [x] Safe: [-Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER]
+- [x] PositiveInt
+- [x] NegativeInt
 
-- latitude: [-90, 90]
-- longitude: [-180, 180]
+### String
+- [x] Ascii
+- [x] Hexadecimal
+- [x] Octal
+- [x] Uppercase
+- [x] Lowercase
+- [x] SemVer
+- [x] Cron
+
+### Color
+- [x] HexColor
+
+### Finance
+- [x] BIC
+- [x] EtheriumAddress
+- [ ] BitcoinAddress
+
+### Hash
+- [x] MD5
+
+### Internet 
+- [x] Port
+- [x] HttpMethod (GET, PATCH, ...)
+- [x] Protocol (http | https)
+
+### Location
+- [x] Longitude (-180, 180)
+- [x] Latitude (-90, 90)
+
+### Person
+- [x] Sex (male | female)
