@@ -51,6 +51,7 @@ organized by data type. Designed to be tightly integrated with other projects in
 - [x] Port
 - [x] HttpMethod (GET, PATCH, ...)
 - [x] Protocol (http | https)
+- [x] MagnetURI
 
 ### Location
 - [x] Longitude (-180, 180)

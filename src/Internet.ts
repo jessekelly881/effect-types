@@ -55,3 +55,32 @@ export const Protocol = S.literal("http", "https")
  * @since 1.0.0
  */
 export type Protocol = S.To<typeof Protocol>
+
+
+
+const magnetURIRegex = /(?:^magnet:\?|[^?&]&)xt(?:\.1)?=urn:(?:(?:aich|bitprint|btih|ed2k|ed2khash|kzhash|md5|sha1|tree:tiger):[a-z0-9]{32}(?:[a-z0-9]{8})?|btmh:1220[a-z0-9]{64})(?:$|&)/i;
+
+/**
+ * A port number
+ * @category datatypes
+ * @since 1.0.0
+ */
+export const magnetUri = (annotations?: S.AnnotationOptions<string>) => S.pattern(magnetURIRegex, {
+    message: () => `a magnet uri`,
+    identifier: "MagnetURI",
+    description: `A magnet uri`,
+    ...annotations
+});
+
+/**
+ * A port number
+ * @category datatypes
+ * @since 1.0.0
+ */
+export const MagnetURI = pipe(S.string, magnetUri(), S.brand("MagnetURI"));
+
+/**
+ * @category brands
+ * @since 1.0.0
+ */
+export type MagnetURI = S.To<typeof MagnetURI>
