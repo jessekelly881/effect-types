@@ -1,6 +1,7 @@
 import * as S from "@effect/schema/Schema";
 import { pipe } from "@effect/data/Function";
 import multilineRegexp from "./common";
+import * as Fake from "effect-schema-compilers/dist/faker";
 
 
 /**
@@ -41,7 +42,12 @@ export const hexadecimal = <A extends string>() => S.pattern<A>(/^(0x|0h)?[0-9A-
  * @since 1.0.0
  * @category datatype
  */
-export const Hexadecimal = pipe(S.string, hexadecimal(), S.brand("Hexadecimal"));
+export const Hexadecimal = pipe(
+	S.string, 
+	hexadecimal(), 
+	Fake.faker(f => f.string.hexadecimal()),
+	S.brand("Hexadecimal")
+);
 
 /**
  * @since 1.0.0
@@ -65,7 +71,12 @@ export const octal = <A extends string>() => S.pattern<A>(/^(0o)?[0-7]+$/i, {
  * @since 1.0.0
  * @category datatype
  */
-export const Octal = pipe(S.string, octal(), S.brand("Octal"));
+export const Octal = pipe(
+	S.string, 
+	octal(), 
+	Fake.faker(f => f.string.octal()),
+	S.brand("Octal")
+);
 
 /**
  * @since 1.0.0
@@ -124,7 +135,12 @@ export const semVer = <A extends string>() => S.pattern<A>(semVerRegex, {
  * @since 1.0.0
  * @category datatype
  */
-export const SemVer = pipe(S.string, semVer(), S.brand("SemVer"));
+export const SemVer = pipe(
+	S.string, 
+	semVer(), 
+	Fake.faker(f => f.system.semver()),
+	S.brand("SemVer")
+);
 
 /**
  * @since 1.0.0
@@ -161,7 +177,7 @@ export type Lowercase = S.To<typeof Lowercase>
 
 
 
-const cronRegex = /(@(annually|yearly|monthly|weekly|daily|hourly|reboot))|(@every (\d+(ns|us|µs|ms|s|m|h))+)|((((\d+,)+\d+|(\d+(\/|-)\d+)|\d+|\*) ?){5,7})/
+const cronRegex = /^((((\d+,)+\d+|(\d+(\/|-|#)\d+)|\d+L?|\*(\/\d+)?|L(-\d+)?|\?|[A-Z]{3}(-[A-Z]{3})?) ?){5,7})$|(@(annually|yearly|monthly|weekly|daily|hourly|reboot))|(@every (\d+(ns|us|µs|ms|s|m|h))+)/
 
 /**
  * A cron string
@@ -179,7 +195,12 @@ export const cron = <A extends string>() => S.pattern<A>(cronRegex, {
  * @since 1.0.0
  * @category datatype
  */
-export const Cron = pipe(S.string, cron(), S.brand("Cron"));
+export const Cron = pipe(
+	S.string, 
+	cron(), 
+	Fake.faker(f => f.system.cron()),
+	S.brand("Cron")
+);
 
 /**
  * @since 1.0.0

@@ -18,6 +18,8 @@
   "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
+    "@faker-js/faker": "^8.0.2",
+    "effect-schema-compilers": "^0.0.15",
     "fast-check": "^3.7.1",
     "husky": "^8.0.3",
     "tsup": "^6.6.3",
@@ -29,7 +31,6 @@
     "@effect/match": "^0.23.3",
     "@effect/schema": "^0.19.3",
     "@types/validator": "^13.7.17",
-    "effect-http": "^0.1.0",
-    "effect-schema-compilers": "^0.0.8"
+    "effect-http": "^0.1.0"
   }
 }
