@@ -42,7 +42,7 @@ organized by data type. Designed to be tightly integrated with other projects in
 ### Finance
 - [x] BIC
 - [x] EtheriumAddress
-- [ ] BitcoinAddress
+- [x] BitcoinAddress
 
 ### Hash
 - [x] MD5

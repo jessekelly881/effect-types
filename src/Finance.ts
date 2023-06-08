@@ -63,3 +63,34 @@ export const EthereumAddress = pipe(
  * @since 1.0.0
  */
 export type EthereumAddress = S.To<typeof EthereumAddress>
+
+
+
+const bitcoinAddressRegex = /^(bc1)[a-z0-9]{25,39}$|^(1|3)[A-HJ-NP-Za-km-z1-9]{25,39}$/;
+
+/**
+ * @category filters
+ * @since 1.0.0
+ */
+export const bitcoinAddress = <A extends string>() => S.pattern<A>(bitcoinAddressRegex, {
+    message: () => `a Bitcoin address`,
+    identifier: `BitcoinAddress`,
+    description: "A Bitcoin address",
+});
+  
+/**
+ * @category datatype
+ * @since 1.0.0
+ */
+export const BitcoinAddress = pipe(
+	S.string, 
+	bitcoinAddress(), 
+	Fake.faker(f => f.finance.bitcoinAddress()),
+	S.brand("BitcoinAddress")
+)
+
+/**
+ * @category brands
+ * @since 1.0.0
+ */
+export type BitcoinAddress = S.To<typeof BitcoinAddress>
