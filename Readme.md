@@ -15,50 +15,153 @@ organized by data type. Designed to be tightly integrated with other projects in
 
 ### Number
 
-- [x] U8: [0, 255]
-- [x] U16: [0, 65535]
-- [x] U32: [0, 4294967295]
-- [x] U64: [0, 18446744073709551615]
-- [x] I8: [-128, 127]
-- [x] I16: [-32768, 32767]
-- [x] I32: [-2147483648, 2147483647]
-- [x] I64: [-9223372036854775808, 9223372036854775807]
-- [x] Safe: [-Number.MAX_SAFE_INTEGER, Number.MAX_SAFE_INTEGER]
-- [x] PositiveInt
-- [x] NegativeInt
+```ts
+import * as N from "effect-types/dist/Number";
+import * as S from "@effect/schema/Schema";
+import { pipe } from "@effect/data/Function";
+
+// data types
+N.U8 // Schema<number, number & Brand<"U8">>
+N.U16
+N.U32
+N.U64
+N.I8 // [-128, 127]
+N.I16
+N.I32
+N.I64
+N.Safe // [Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER]
+N.PositiveInt
+N.NegativeInt
+
+// filters
+pipe(S.number, N.u8()) // [0, 255]
+pipe(S.number, N.u16())
+pipe(S.number, N.u32())
+pipe(S.number, N.u64())
+pipe(S.number, N.i8())
+pipe(S.number, N.i16())
+pipe(S.number, N.i32())
+pipe(S.number, N.i64())
+pipe(S.number, N.safe())
+pipe(S.number, N.positiveInt())
+pipe(S.number, N.negativeInt())
+```
 
 ### String
-- [x] Ascii
-- [x] Hexadecimal
-- [x] Octal
-- [x] Uppercase
-- [x] Lowercase
-- [x] SemVer
-- [x] Cron
+
+```ts
+import * as Str from "effect-types/dist/String";
+import * as S from "@effect/schema/Schema";
+import { pipe } from "@effect/data/Function";
+
+// data types
+Str.Ascii 
+Str.Hexadecimal
+Str.Octal
+Str.Uppercase
+Str.Lowercase
+Str.SemVer
+Str.Cron
+
+// filters
+pipe(S.string, Str.ascii())
+pipe(S.string, Str.hexadecimal())
+pipe(S.string, Str.octal())
+pipe(S.string, Str.uppercase())
+pipe(S.string, Str.lowercase())
+pipe(S.string, Str.semVer())
+pipe(S.string, Str.cron())
+```
 
 ### Color
-- [x] HexColor
+
+```ts
+import * as C from "effect-types/dist/Color";
+import * as S from "@effect/schema/Schema";
+import { pipe } from "@effect/data/Function";
+
+// data types
+C.HexColor
+
+// filters
+pipe(S.string, C.hexColor())
+```
 
 ### Finance
-- [x] BIC
-- [x] EtheriumAddress
-- [x] BitcoinAddress
+
+```ts
+import * as F from "effect-types/dist/Finance";
+import * as S from "@effect/schema/Schema";
+import { pipe } from "@effect/data/Function";
+
+// data types
+F.BIC // Business Identifier Codes (BIC)
+F.EtheriumAddress
+F.BitcoinAddress
+
+// filters
+pipe(S.string, F.bic())
+pipe(S.string, F.etheriumAddress())
+pipe(S.string, F.bitcoinAddress())
+```
+
 
 ### Hash
-- [x] MD5
+
+```ts
+import * as H from "effect-types/dist/Hash";
+import * as S from "@effect/schema/Schema";
+import { pipe } from "@effect/data/Function";
+
+// data types
+H.MD5
+
+// filters
+pipe(S.string, H.md5())
+```
 
 ### Internet 
-- [x] Port
-- [x] HttpMethod (GET, PATCH, ...)
-- [x] Protocol (http | https)
-- [x] MagnetURI
+
+```ts
+import * as I from "effect-types/dist/Internet";
+import * as S from "@effect/schema/Schema";
+import { pipe } from "@effect/data/Function";
+
+// data types
+I.Port
+I.HttpMethod // GET, PATCH, ...
+I.Protocol // http | https
+I.MagnetURI
+
+// filters
+pipe(S.number. I.port())
+pipe(S.number. I.magnetUri())
+```
 
 ### Location
-- [x] Longitude (-180, 180)
-- [x] Latitude (-90, 90)
+
+```ts
+import * as L from "effect-types/dist/Location";
+import * as S from "@effect/schema/Schema";
+import { pipe } from "@effect/data/Function";
+
+// data types
+L.Longitude
+L.Latitude
+
+// filters
+pipe(S.number, L.longitude())
+pipe(S.number, L.latitude())
+```
 
 ### Person
-- [x] Sex (male | female)
+
+```ts
+import * as P from "effect-types/dist/Person";
+
+// data types
+P.Sex // male | female
+```
 
 ## Credits
 This library depends heavily on the work done on the [validator.js](https://github.com/validatorjs/validator.js) project and while it is not a direct dependency of this project, a significant amount of code has been borrowed for validating string types. 
