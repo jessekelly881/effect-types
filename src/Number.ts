@@ -210,14 +210,17 @@ export type I64 = S.To<typeof I64>
  * @category filters
  * @since 1.0.0
  */
-export const safe = S.between(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
+export const safe = (annotations?: S.AnnotationOptions<number>) => S.between(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, {
+	identifier: 'Safe',
+	...annotations
+});
 
 /**
  * A "safe" number, i.e. a number between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER
  * @category datatype
  * @since 1.0.0
  */
-export const Safe = pipe(S.number, safe, S.brand("Safe"))
+export const Safe = pipe(S.number, safe(), S.brand("Safe"))
 
 /**
  * @category brands

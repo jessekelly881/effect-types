@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { testValues } from "./common";
+import { assertValidFakeValue, testValues } from "./common";
 import * as _ from "../src/Internet";
 
 describe("Internet", () => {

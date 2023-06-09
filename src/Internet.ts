@@ -34,7 +34,10 @@ export type Port = S.To<typeof Port>
  * @category datatypes
  * @since 1.0.0
  */
-export const HttpMethod = S.literal("GET", "POST", "PUT", "DELETE", "PATCH")
+export const HttpMethod = pipe(
+    S.literal("GET", "POST", "PUT", "DELETE", "PATCH"), 
+    S.identifier("HttpMethod")
+)
 
 /**
  * @category brands
@@ -48,7 +51,10 @@ export type HttpMethod = S.To<typeof HttpMethod>
  * @category datatypes
  * @since 1.0.0
  */
-export const Protocol = S.literal("http", "https")
+export const Protocol = pipe(
+    S.literal("http", "https"),
+    S.identifier("Protocol")
+)
 
 /**
  * @category brands
