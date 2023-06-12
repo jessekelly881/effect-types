@@ -138,8 +138,8 @@ I.IPv4
 
 // filters
 pipe(S.number. I.port())
-pipe(S.number. I.magnetUri())
-pipe(S.number. I.ipv4())
+pipe(S.string. I.magnetUri())
+pipe(S.string. I.ipv4())
 ```
 
 ### Location
