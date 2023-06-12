@@ -62,6 +62,7 @@ Str.Uppercase
 Str.Lowercase
 Str.SemVer
 Str.Cron
+Str.Slug // e.g. foo-bar-foo
 
 // filters
 pipe(S.string, Str.ascii())
@@ -71,6 +72,7 @@ pipe(S.string, Str.uppercase())
 pipe(S.string, Str.lowercase())
 pipe(S.string, Str.semVer())
 pipe(S.string, Str.cron())
+pipe(S.string, Str.slug())
 ```
 
 ### Color

@@ -72,4 +72,14 @@ describe("String", () => {
 
         assertValidFakeValue(_.Cron)
     })
+
+    it("Slug", () => {
+        testValues(
+            _.Slug, 
+            ['foo', 'foo-bar', 'foo_bar', 'foo-bar-foo', 'foo-bar_foo', 'foo-bar_foo*75-b4r-**_foo', 'foo-bar_foo*75-b4r-**_foo-&&'], 
+            ['not-----------slug', '@#_$@', '-not-slug', 'not-slug-', '_not-slug', 'not-slug_', 'not slug']
+        )
+
+        assertValidFakeValue(_.Slug)
+    })
 })

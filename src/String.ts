@@ -207,3 +207,36 @@ export const Cron = pipe(
  * @category brand
  */
 export type Cron = S.To<typeof Cron>
+
+
+
+const slugRegex = /^[^\s-_](?!.*?[-_]{2,})[a-z0-9-\\][^\s]*[^-_\s]$/;
+
+/**
+ * @since 1.0.0
+ * @example dolores-illo-est, illo-ratione
+ * @category filter
+ */
+export const slug = <A extends string>() => S.pattern<A>(slugRegex, {
+  message: () => `a slug`,
+  identifier: `Slug`,
+  description: "A slug",
+});
+
+/**
+ * @example dolores-illo-est, illo-ratione
+ * @since 1.0.0
+ * @category datatype
+ */
+export const Slug = pipe(
+	S.string, 
+	slug(), 
+	Fake.faker(f => f.lorem.slug()),
+	S.brand("Slug")
+);
+
+/**
+ * @since 1.0.0
+ * @category brand
+ */
+export type Slug = S.To<typeof Slug>
