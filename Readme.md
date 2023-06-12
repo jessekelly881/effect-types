@@ -134,10 +134,12 @@ I.Port
 I.HttpMethod // GET, PATCH, ...
 I.Protocol // http | https
 I.MagnetURI
+I.IPv4
 
 // filters
 pipe(S.number. I.port())
 pipe(S.number. I.magnetUri())
+pipe(S.number. I.ipv4())
 ```
 
 ### Location
