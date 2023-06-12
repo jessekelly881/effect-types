@@ -1,5 +1,11 @@
 # @kellyjesse881/empty
 
+## 0.0.6
+
+### Patch Changes
+
+- c6136ee: updated project metadata
+
 ## 0.0.5
 
 ### Patch Changes

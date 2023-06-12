@@ -1,20 +1,20 @@
 {
   "name": "effect-types",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "private": false,
   "homepage": "https://github.com/jessekelly881/effect-types",
   "tags": [
-      "typescript",
-      "schema",
-      "validation",
-      "effect-ts"
+    "typescript",
+    "schema",
+    "validation",
+    "effect-ts"
   ],
   "keywords": [
-      "typescript",
-      "schema",
-      "validation",
-      "effect-ts"
+    "typescript",
+    "schema",
+    "validation",
+    "effect-ts"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
