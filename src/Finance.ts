@@ -1,5 +1,5 @@
 import * as S from "@effect/schema/Schema";
-import { pipe } from "@effect/data/Function";
+import { identity, pipe } from "@effect/data/Function";
 import * as Fake from "effect-schema-compilers/dist/faker";
 
 
@@ -94,3 +94,41 @@ export const BitcoinAddress = pipe(
  * @since 1.0.0
  */
 export type BitcoinAddress = S.To<typeof BitcoinAddress>
+
+
+
+const cardNumberRegex = /^(?:4[0-9]{12}(?:[0-9]{3,6})?|5[1-5][0-9]{14}|(222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}|6(?:011|5[0-9][0-9])[0-9]{12,15}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11}|6[27][0-9]{14}|^(81[0-9]{14,17}))$/;
+
+/**
+ * Removes dashes(-) and spaces from string
+ */
+export const sanitizeCardNumber = () => <I, A extends string>(self: S.Schema<I, A>): S.Schema<I, A> =>
+  S.transform(self, S.to(self), (s) => s.replace(/[- ]+/g, '').toLocaleLowerCase() as A, identity)
+
+/**
+ * @category filters
+ * @since 1.0.0
+ */
+export const creditCardNumber = <A extends string>() => S.pattern<A>(cardNumberRegex, {
+    message: () => `a credit card number`,
+    identifier: `CreditCardNumber`,
+    description: "A credit card number",
+});
+  
+/**
+ * @category datatype
+ * @since 1.0.0
+ */
+export const CreditCardNumber = pipe(
+	S.string,
+	sanitizeCardNumber(),
+	creditCardNumber(), 
+	Fake.faker(f => f.finance.creditCardNumber()),
+	S.brand("CreditCardNumber")
+)
+
+/**
+ * @category brands
+ * @since 1.0.0
+ */
+export type CreditCardNumber = S.To<typeof CreditCardNumber>
