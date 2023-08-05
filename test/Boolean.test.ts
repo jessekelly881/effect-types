@@ -1,11 +1,10 @@
 import { describe, it, expect } from "vitest";
 import * as S from "@effect/schema/Schema";
 import * as _ from "../src/Boolean";
-import { pipe } from "@effect/data/Function";
 
 describe("Boolean", () => {
     it("parseFuzzy", () => {
-        const parse = S.parse(_.parseFuzzy(S.string))
+        const parse = S.parse(_.FuzzyBoolean)
 
         expect(parse("true")).toBe(true)
         expect(parse("Yes")).toBe(true)

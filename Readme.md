@@ -11,7 +11,15 @@ organized by data type. Designed to be tightly integrated with other projects in
 
 ### Boolean
 
-- parseFuzzy: string -> boolean
+```ts
+import * as B from "effect-types/dist/Boolean";
+import * as S from "@effect/schema/Schema";
+import { pipe } from "@effect/data/Function";
+
+B.FuzzyBoolean // true | false , 0 | 1 , yes | no , on | off
+
+pipe(S.string, B.fuzzyBoolean)
+```
 
 ### Number
 
