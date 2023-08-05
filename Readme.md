@@ -18,7 +18,7 @@ import { pipe } from "@effect/data/Function";
 
 B.FuzzyBoolean // true | false , 0 | 1 , yes | no , on | off
 
-pipe(S.string, B.fuzzyBoolean)
+pipe(S.string, B.fuzzyBoolean())
 ```
 
 ### Number
