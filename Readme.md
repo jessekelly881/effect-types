@@ -1,7 +1,6 @@
 # Effect types
 
-A collection of types, transforms, filters, compilers, and helpers for @effect/schema 
-organized by data type. Designed to be tightly integrated with other projects in the ecosystem.
+A collection of types, and helpers for @effect/schema organized by data type. Designed to be tightly integrated with other projects in the ecosystem.
 
 ## Todo
 - Integrate with [effect-schema-compilers](https://github.com/jessekelly881/effect-schema-compilers) to include well defined compiler targets for each type. 
