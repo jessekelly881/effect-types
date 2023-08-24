@@ -85,34 +85,6 @@ export const Octal = pipe(
 export type Octal = S.To<typeof Octal>
 
 
-
-/**
- * An uppercase string
- * @since 1.0.0
- * @category filter
- */
-export const uppercase = <A extends string>() =>
-  S.filter<A>((s) => s === s.toUpperCase(), {
-    message: () => `an uppercase string`,
-    identifier: `Uppercase`,
-    description: "An uppercase string",
-  });
-
-/**
- * An uppercase string
- * @since 1.0.0
- * @category datatype
- */
-export const Uppercase = pipe(S.string, uppercase(), S.brand("Uppercase"));
-
-/**
- * @since 1.0.0
- * @category brand
- */
-export type Uppercase = S.To<typeof Uppercase>
-
-
-
 const semVerRegex = multilineRegexp([
   '^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)',
   '(?:-((?:0|[1-9]\\d*|\\d*[a-z-][0-9a-z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-z-][0-9a-z-]*))*))',
@@ -147,34 +119,6 @@ export const SemVer = pipe(
  * @category brand
  */
 export type SemVer = S.To<typeof SemVer>
-
-
-
-/**
- * A lowercase string
- * @since 1.0.0
- * @category filter
- */
-export const lowercase = <A extends string>() =>
-  S.filter<A>((s) => s === s.toLowerCase(), {
-    message: () => `a lowercase string`,
-    identifier: `Lowercase`,
-    description: "A lowercase string",
-  });
-
-/**
- * A lowercase string
- * @since 1.0.0
- * @category datatype
- */
-export const Lowercase = pipe(S.string, lowercase(), S.brand("Lowercase"));
-
-/**
- * @since 1.0.0
- * @category brand
- */
-export type Lowercase = S.To<typeof Lowercase>
-
 
 
 const cronRegex = /^((((\d+,)+\d+|(\d+(\/|-|#)\d+)|\d+L?|\*(\/\d+)?|L(-\d+)?|\?|[A-Z]{3}(-[A-Z]{3})?) ?){5,7})$|(@(annually|yearly|monthly|weekly|daily|hourly|reboot))|(@every (\d+(ns|us|µs|ms|s|m|h))+)/

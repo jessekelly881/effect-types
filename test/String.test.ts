@@ -39,18 +39,6 @@ describe("String", () => {
         assertValidFakeValue(_.SemVer)
     })
 
-    it("Uppercase", () => testValues(
-        _.Uppercase, 
-        ['ABC', 'ABC123', 'ALL CAPS IS FUN.', '   .'], 
-        ['fooBar', '123abc']
-    ))
-
-    it("Lowercase", () => testValues(
-        _.Lowercase, 
-        ['abc', 'abc123', 'this is lowercase.', 'tr竪s 端ber'], 
-        ['fooBar', '123A']
-    ))
-
     it("Cron", () => {
         testValues(
             _.Cron, 
