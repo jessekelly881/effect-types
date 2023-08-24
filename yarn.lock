@@ -230,49 +230,25 @@
     human-id "^1.0.2"
     prettier "^2.7.1"
 
-"@effect/data@^0.12.2", "@effect/data@~0.12.2":
-  version "0.12.2"
-  resolved "https://registry.yarnpkg.com/@effect/data/-/data-0.12.2.tgz#c76ce6e9f92484e77f184f3392724f7729f6467d"
-  integrity sha512-bmWRTcsSRG1FlBswT+D8SxW6r3c4B3pKJrjYfitCD03tXHnup5gLHaWqbFgIjiyYITS+UsJRRjVrNxvyGG4ZNQ==
-
 "@effect/data@^0.17.1", "@effect/data@^0.17.5":
   version "0.17.6"
   resolved "https://registry.yarnpkg.com/@effect/data/-/data-0.17.6.tgz#43d0f1f2283f1ff471094947eb466893a3ec80de"
   integrity sha512-/vwz7Jh05eS0qY8kczR/YyJd18d0C+PMtUkAealh4f6gwvhABLGCnktNJTcq/+UHxY0Cbv18r5uaJ4+7PPC+WQ==
-
-"@effect/io@^0.25.2":
-  version "0.25.7"
-  resolved "https://registry.yarnpkg.com/@effect/io/-/io-0.25.7.tgz#7388b0a121e1fce0f87ae9d34703462e2db5b54e"
-  integrity sha512-+aVOwsyBfFyDvHik8qEUyQY2AeOTG+GAZQmInwkFQvcWx4CokLqn6ysZD2rF9KlDUSYGEeYLtZPC7uQuq9F9Nw==
-  dependencies:
-    "@effect/data" "~0.12.2"
 
 "@effect/io@^0.38.0", "@effect/io@^0.38.2":
   version "0.38.2"
   resolved "https://registry.yarnpkg.com/@effect/io/-/io-0.38.2.tgz#6acbae5ea7e1dcca55766718a9fc4d14a184773b"
   integrity sha512-rnAXFo9BDLbY7DgQE1e8uP/sEniyVCsB7gNs+yXPu0XK9s4kaGinH6XgwYRDBuu7Fu1tQ1yd7JoAdEb7yutNRg==
 
-"@effect/match@^0.23.3":
-  version "0.23.4"
-  resolved "https://registry.yarnpkg.com/@effect/match/-/match-0.23.4.tgz#40e3def1d764d201ea5b269aa27b4b3f5f884e1e"
-  integrity sha512-bt8h5JySwV6s/HxfHz8d20drvTi1/45Ka67C4mZQPoQu4KaxLDnLMWYP/lq6eZCv7n6+rIfDEZ9aYZZmwoK/DQ==
-  dependencies:
-    "@effect/data" "^0.12.2"
-    "@effect/schema" "^0.19.0"
+"@effect/match@^0.34.0":
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/@effect/match/-/match-0.34.0.tgz#02ae9cea4b305d6b8dd22035fcef994109f1ffc0"
+  integrity sha512-3fPqDT81rOU+83s84dx7Dh8pMtBq6BE+FGxq5U6FB48IeUdr35jayeuIXe6ZGQC6YorM3GJny6XYO5gOy0AAow==
 
 "@effect/printer@^0.13.0":
   version "0.13.0"
   resolved "https://registry.yarnpkg.com/@effect/printer/-/printer-0.13.0.tgz#8cf225fe761ae6eab04915af5b139b2709677b36"
   integrity sha512-vqKilbg36AEHZJNj9fiV6qUALojR2kVePKbuJJAkaGQao9Duc6rL3QSbaGEaEzar6v68j6TGTOndg/inI2bQFA==
-
-"@effect/schema@^0.19.0":
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/@effect/schema/-/schema-0.19.0.tgz#be074860d0c4bbc392ce60bf85c718b1fa6cd293"
-  integrity sha512-BCmDLvFJol1uAyCJbCi+Ss0HFf+k/qb4tyvc8Iu4O/7ChNnBiACDWukU3f+7lHZPIh729arzdBoBSQqyKX64iw==
-  dependencies:
-    "@effect/data" "^0.12.2"
-    "@effect/io" "^0.25.2"
-    fast-check "^3.8.1"
 
 "@effect/schema@^0.33.0", "@effect/schema@^0.33.1", "@effect/schema@^0.33.2":
   version "0.33.2"
@@ -1415,7 +1391,7 @@ external-editor@^3.1.0:
     iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
-fast-check@^3.11.0, fast-check@^3.12.0, fast-check@^3.7.1, fast-check@^3.8.1:
+fast-check@^3.11.0, fast-check@^3.12.0, fast-check@^3.7.1:
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/fast-check/-/fast-check-3.12.0.tgz#440949277387a053f7f82cd532fa3fcf67346ba1"
   integrity sha512-SqahE9mlL3+lhjJ39joMLwcj6F+24hfZdf/tchlNO8sHcTdrUUdA5P/ZbSFZM9Xpzs36XaneGwE0FWepm/zyOA==

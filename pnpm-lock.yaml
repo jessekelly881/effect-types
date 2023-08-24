@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.17.5
     version: 0.17.6
   '@effect/match':
-    specifier: ^0.23.3
-    version: 0.23.3
+    specifier: ^0.34.0
+    version: 0.34.0(@effect/data@0.17.6)
   '@effect/schema':
     specifier: ^0.33.2
     version: 0.33.2(@effect/data@0.17.6)(@effect/io@0.38.2)
@@ -261,18 +261,8 @@ packages:
       prettier: 2.8.4
     dev: true
 
-  /@effect/data@0.12.5:
-    resolution: {integrity: sha512-gmHSsG4earpIWufwCNT1R1pZ5BIe7z0bMmexnAFOT9csc8bwTSzk1e5QAd/65/vyczf/cMMrXgjpasdxlJ5POA==}
-    dev: false
-
   /@effect/data@0.17.6:
     resolution: {integrity: sha512-/vwz7Jh05eS0qY8kczR/YyJd18d0C+PMtUkAealh4f6gwvhABLGCnktNJTcq/+UHxY0Cbv18r5uaJ4+7PPC+WQ==}
-    dev: false
-
-  /@effect/io@0.25.10:
-    resolution: {integrity: sha512-hDgm6L2QKO+ML3s7irvKD78lq7n8HXJ9AnDjSG8nRF3rKaTh9MAwI8RN05Yd0qgGo9iXe93RSaWzO2+Xn/0WWg==}
-    dependencies:
-      '@effect/data': 0.12.5
     dev: false
 
   /@effect/io@0.38.2(@effect/data@0.17.6):
@@ -283,11 +273,12 @@ packages:
       '@effect/data': 0.17.6
     dev: false
 
-  /@effect/match@0.23.3:
-    resolution: {integrity: sha512-YLAko8y1IwYBSJO02ItBM3XXIWzUo1NUFszOrVYI00yBcR98Dvh7YJZ1hsNsr+XAz+ck+29uLobJJOQgQsvg8g==}
+  /@effect/match@0.34.0(@effect/data@0.17.6):
+    resolution: {integrity: sha512-3fPqDT81rOU+83s84dx7Dh8pMtBq6BE+FGxq5U6FB48IeUdr35jayeuIXe6ZGQC6YorM3GJny6XYO5gOy0AAow==}
+    peerDependencies:
+      '@effect/data': ^0.17.1
     dependencies:
-      '@effect/data': 0.12.5
-      '@effect/schema': 0.19.3
+      '@effect/data': 0.17.6
     dev: false
 
   /@effect/printer@0.13.0(@effect/data@0.17.6)(@effect/io@0.38.2)(@effect/typeclass@0.3.0):
@@ -300,14 +291,6 @@ packages:
       '@effect/data': 0.17.6
       '@effect/io': 0.38.2(@effect/data@0.17.6)
       '@effect/typeclass': 0.3.0
-    dev: false
-
-  /@effect/schema@0.19.3:
-    resolution: {integrity: sha512-jR7o19HBX7PBYRLV1G6ZlM90giRe+lZkA6BqVNamkhNfVsHU4MnGr2lqM2H4fy4MgR744GGXuxCDjVdydkMvAw==}
-    dependencies:
-      '@effect/data': 0.12.5
-      '@effect/io': 0.25.10
-      fast-check: 3.12.0
     dev: false
 
   /@effect/schema@0.33.2(@effect/data@0.17.6)(@effect/io@0.38.2):
