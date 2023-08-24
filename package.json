@@ -34,7 +34,7 @@
     "@faker-js/faker": "^8.0.2",
     "fast-check": "^3.7.1",
     "husky": "^8.0.3",
-    "tsup": "^6.6.3",
+    "tsup": "^7.2.0",
     "typescript": "^5.0.4",
     "vitest": "^0.31.4"
   },
