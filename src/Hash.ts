@@ -18,7 +18,7 @@ export const md5 = <A extends string>() => S.pattern<A>(/^[a-f0-9]{32}$/, {
  * @since 1.0.0
  * @category datatype
  */
-export const MD5 = pipe(S.string, md5(), S.brand("MD5"));
+export const MD5 = S.string.pipe(md5(), S.brand("MD5"));
 
 /**
  * @since 1.0.0

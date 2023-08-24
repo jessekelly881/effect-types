@@ -17,14 +17,14 @@ export const fuzzyBoolean = () => <I>(self: S.Schema<I, string>): S.Schema<I, bo
     self,
     S.boolean,
     (s) => {
-      if (A.contains(Str.Equivalence)(truthyValues, s.toLowerCase())) {
+      if (A.contains(truthyValues, s.toLowerCase())) {
         return PR.success(true);
       }
-      if (A.contains(Str.Equivalence)(falsyValues, s.toLowerCase())) {
+      if (A.contains(falsyValues, s.toLowerCase())) {
         return PR.success(false);
       }
 
-      return PR.failure(PR.type(schema.ast, s));
+      return PR.failure(PR.type(self.ast, s));
     },
     (n) => PR.success(String(n))
   );

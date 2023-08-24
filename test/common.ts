@@ -1,5 +1,5 @@
 import * as S from "@effect/schema/Schema"
-import { it, expect } from "vitest";
+import { expect } from "vitest";
 import * as Fake from "effect-schema-compilers/dist/faker";
 import * as F from '@faker-js/faker';
 

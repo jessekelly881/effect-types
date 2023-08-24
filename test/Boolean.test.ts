@@ -4,17 +4,17 @@ import * as _ from "../src/Boolean";
 
 describe("Boolean", () => {
     it("parseFuzzy", () => {
-        const parse = S.parse(_.FuzzyBoolean)
+        const decode = S.decodeSync(_.FuzzyBoolean)
 
-        expect(parse("true")).toBe(true)
-        expect(parse("Yes")).toBe(true)
-        expect(parse("1")).toBe(true)
-        expect(parse("on")).toBe(true)
-        expect(parse("OK")).toBe(true)
+        expect(decode("true")).toBe(true)
+        expect(decode("Yes")).toBe(true)
+        expect(decode("1")).toBe(true)
+        expect(decode("on")).toBe(true)
+        expect(decode("OK")).toBe(true)
 
-        expect(parse("false")).toBe(false)
-        expect(parse("No")).toBe(false)
-        expect(parse("0")).toBe(false)
-        expect(parse("false")).toBe(false)
+        expect(decode("false")).toBe(false)
+        expect(decode("No")).toBe(false)
+        expect(decode("0")).toBe(false)
+        expect(decode("false")).toBe(false)
     })
 })

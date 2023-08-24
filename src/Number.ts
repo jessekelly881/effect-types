@@ -267,3 +267,12 @@ export const NegativeInt = pipe(S.number, negativeInt, S.brand("NegativeInt"))
  * @since 1.0.0
  */
 export type NegativeInt = S.To<typeof NegativeInt>
+
+export const NumberFromBoolean = S.transform(
+  S.boolean,
+  S.number,
+  (b) => (b ? 1 : 0),
+  (n) => n !== 0
+);
+
+export const FuzzyNumber = S.union(S.number, S.NumberFromString, NumberFromBoolean)
