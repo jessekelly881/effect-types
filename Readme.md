@@ -65,8 +65,6 @@ import { pipe } from "@effect/data/Function";
 Str.Ascii 
 Str.Hexadecimal
 Str.Octal
-Str.Uppercase
-Str.Lowercase
 Str.SemVer
 Str.Cron
 Str.Slug // e.g. foo-bar-foo
@@ -75,8 +73,6 @@ Str.Slug // e.g. foo-bar-foo
 pipe(S.string, Str.ascii())
 pipe(S.string, Str.hexadecimal())
 pipe(S.string, Str.octal())
-pipe(S.string, Str.uppercase())
-pipe(S.string, Str.lowercase())
 pipe(S.string, Str.semVer())
 pipe(S.string, Str.cron())
 pipe(S.string, Str.slug())
