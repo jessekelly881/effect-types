@@ -7,13 +7,13 @@ settings:
 dependencies:
   '@effect/data':
     specifier: ^0.17.5
-    version: 0.17.5
+    version: 0.17.6
   '@effect/match':
     specifier: ^0.23.3
     version: 0.23.3
   '@effect/schema':
     specifier: ^0.33.2
-    version: 0.33.2(@effect/data@0.17.5)(@effect/io@0.38.2)
+    version: 0.33.2(@effect/data@0.17.6)(@effect/io@0.38.2)
   '@types/validator':
     specifier: ^13.7.17
     version: 13.7.17
@@ -265,8 +265,8 @@ packages:
     resolution: {integrity: sha512-gmHSsG4earpIWufwCNT1R1pZ5BIe7z0bMmexnAFOT9csc8bwTSzk1e5QAd/65/vyczf/cMMrXgjpasdxlJ5POA==}
     dev: false
 
-  /@effect/data@0.17.5:
-    resolution: {integrity: sha512-D6hYM+IReoM6YR8okIS5dygcUDdXR+De3O2b8SHwenE0PRQrGnZ9O6kJFeqkkX6pIZwEWBnb1l9SKOrw7auI4A==}
+  /@effect/data@0.17.6:
+    resolution: {integrity: sha512-/vwz7Jh05eS0qY8kczR/YyJd18d0C+PMtUkAealh4f6gwvhABLGCnktNJTcq/+UHxY0Cbv18r5uaJ4+7PPC+WQ==}
     dev: false
 
   /@effect/io@0.25.10:
@@ -275,12 +275,12 @@ packages:
       '@effect/data': 0.12.5
     dev: false
 
-  /@effect/io@0.38.2(@effect/data@0.17.5):
+  /@effect/io@0.38.2(@effect/data@0.17.6):
     resolution: {integrity: sha512-rnAXFo9BDLbY7DgQE1e8uP/sEniyVCsB7gNs+yXPu0XK9s4kaGinH6XgwYRDBuu7Fu1tQ1yd7JoAdEb7yutNRg==}
     peerDependencies:
       '@effect/data': ^0.17.1
     dependencies:
-      '@effect/data': 0.17.5
+      '@effect/data': 0.17.6
     dev: false
 
   /@effect/match@0.23.3:
@@ -290,15 +290,15 @@ packages:
       '@effect/schema': 0.19.3
     dev: false
 
-  /@effect/printer@0.13.0(@effect/data@0.17.5)(@effect/io@0.38.2)(@effect/typeclass@0.3.0):
+  /@effect/printer@0.13.0(@effect/data@0.17.6)(@effect/io@0.38.2)(@effect/typeclass@0.3.0):
     resolution: {integrity: sha512-vqKilbg36AEHZJNj9fiV6qUALojR2kVePKbuJJAkaGQao9Duc6rL3QSbaGEaEzar6v68j6TGTOndg/inI2bQFA==}
     peerDependencies:
       '@effect/data': ~0.17.1
       '@effect/io': ~0.38.0
       '@effect/typeclass': ~0.3.0
     dependencies:
-      '@effect/data': 0.17.5
-      '@effect/io': 0.38.2(@effect/data@0.17.5)
+      '@effect/data': 0.17.6
+      '@effect/io': 0.38.2(@effect/data@0.17.6)
       '@effect/typeclass': 0.3.0
     dev: false
 
@@ -310,21 +310,21 @@ packages:
       fast-check: 3.12.0
     dev: false
 
-  /@effect/schema@0.33.2(@effect/data@0.17.5)(@effect/io@0.38.2):
+  /@effect/schema@0.33.2(@effect/data@0.17.6)(@effect/io@0.38.2):
     resolution: {integrity: sha512-GfV4kXAs4tkx09bGD6J4RDqVN+xea4UP0I05r1wloox6j0eYgXYaSKAXAZ7qBKVywkba3cDUDZhc9nplAD8TAA==}
     peerDependencies:
       '@effect/data': ^0.17.1
       '@effect/io': ^0.38.0
     dependencies:
-      '@effect/data': 0.17.5
-      '@effect/io': 0.38.2(@effect/data@0.17.5)
+      '@effect/data': 0.17.6
+      '@effect/io': 0.38.2(@effect/data@0.17.6)
       fast-check: 3.12.0
     dev: false
 
   /@effect/typeclass@0.3.0:
     resolution: {integrity: sha512-eg91Dfpx8FqXIoq4DDVuY/wl+92K89HEgtwVcScRu7QAsp64QzkFpmNgHKPyA3tzT7ku+cV16NdoDId58sJgiQ==}
     dependencies:
-      '@effect/data': 0.17.5
+      '@effect/data': 0.17.6
     dev: false
 
   /@esbuild/android-arm64@0.17.11:
@@ -1332,9 +1332,9 @@ packages:
   /effect-http@0.25.0:
     resolution: {integrity: sha512-7TodgQRWojfUf9qxDSY8rqMIh1UnxOsLm3ciysSSnL5O0hux2koC/JFQed/C9Ogfdsburzdnwz2em3+HGX/DoA==}
     dependencies:
-      '@effect/data': 0.17.5
-      '@effect/io': 0.38.2(@effect/data@0.17.5)
-      '@effect/schema': 0.33.2(@effect/data@0.17.5)(@effect/io@0.38.2)
+      '@effect/data': 0.17.6
+      '@effect/io': 0.38.2(@effect/data@0.17.6)
+      '@effect/schema': 0.33.2(@effect/data@0.17.6)(@effect/io@0.38.2)
       express: 4.18.2
       schema-openapi: 0.11.0
       swagger-ui-express: 5.0.0(express@4.18.2)
@@ -1345,10 +1345,10 @@ packages:
   /effect-schema-compilers@0.0.18:
     resolution: {integrity: sha512-Hrmzu5CFpL5Tb14IvDia6sECosCXwyV891o7wV9rzw933olMMgc04f5BlwmQ20rIv9UC/c7p4ZdxbfmiwudAAg==}
     dependencies:
-      '@effect/data': 0.17.5
-      '@effect/io': 0.38.2(@effect/data@0.17.5)
-      '@effect/printer': 0.13.0(@effect/data@0.17.5)(@effect/io@0.38.2)(@effect/typeclass@0.3.0)
-      '@effect/schema': 0.33.2(@effect/data@0.17.5)(@effect/io@0.38.2)
+      '@effect/data': 0.17.6
+      '@effect/io': 0.38.2(@effect/data@0.17.6)
+      '@effect/printer': 0.13.0(@effect/data@0.17.6)(@effect/io@0.38.2)(@effect/typeclass@0.3.0)
+      '@effect/schema': 0.33.2(@effect/data@0.17.6)(@effect/io@0.38.2)
       '@effect/typeclass': 0.3.0
       fast-check: 3.12.0
       typescript: 5.0.4
@@ -2805,9 +2805,9 @@ packages:
   /schema-openapi@0.11.0:
     resolution: {integrity: sha512-SIcpodIAcUTMeMgB+FiRTDPzksmKNkiKxeuvpcxHMrBqdvoClY7WrIPUSKKInKM/YWTThlTU3btB7UWV2x049Q==}
     dependencies:
-      '@effect/data': 0.17.5
-      '@effect/io': 0.38.2(@effect/data@0.17.5)
-      '@effect/schema': 0.33.2(@effect/data@0.17.5)(@effect/io@0.38.2)
+      '@effect/data': 0.17.6
+      '@effect/io': 0.38.2(@effect/data@0.17.6)
+      '@effect/schema': 0.33.2(@effect/data@0.17.6)(@effect/io@0.38.2)
     dev: false
 
   /semver@5.7.1:
