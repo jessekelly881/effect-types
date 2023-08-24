@@ -33,7 +33,7 @@ devDependencies:
     version: 8.0.2
   fast-check:
     specifier: ^3.7.1
-    version: 3.7.1
+    version: 3.12.0
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -307,7 +307,7 @@ packages:
     dependencies:
       '@effect/data': 0.12.5
       '@effect/io': 0.25.10
-      fast-check: 3.8.1
+      fast-check: 3.12.0
     dev: false
 
   /@effect/schema@0.33.2(@effect/data@0.17.5)(@effect/io@0.38.2):
@@ -1602,21 +1602,6 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       pure-rand: 6.0.1
-    dev: false
-
-  /fast-check@3.7.1:
-    resolution: {integrity: sha512-d63EsxP1eedA+x94xNxIpTWtBShq95KL6ZSrKTD0Pp1lPASmajAaDHJ71c5ebwZ+vBzlTt3AOalcAnBzL7PQ6Q==}
-    engines: {node: '>=8.0.0'}
-    dependencies:
-      pure-rand: 6.0.1
-    dev: true
-
-  /fast-check@3.8.1:
-    resolution: {integrity: sha512-WRll9CUIz6jWKgByFlHT2M/1BY3F7lewKl5BBIz5VHAy7B8y5iklK9rVm922kx+0x1hJqdkffuTs008xfIgytQ==}
-    engines: {node: '>=8.0.0'}
-    dependencies:
-      pure-rand: 6.0.1
-    dev: false
 
   /fast-diff@1.3.0:
     resolution: {integrity: sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==}
