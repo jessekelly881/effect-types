@@ -16,7 +16,7 @@ dependencies:
     version: 0.33.2(@effect/data@0.17.6)(@effect/io@0.38.2)
   '@types/validator':
     specifier: ^13.7.17
-    version: 13.7.17
+    version: 13.11.1
   effect-http:
     specifier: ^0.25.0
     version: 0.25.0
@@ -800,8 +800,8 @@ packages:
     resolution: {integrity: sha512-G8hZ6XJiHnuhQKR7ZmysCeJWE08o8T0AXtk5darsCaTVsYZhhgUrq53jizaR2FvsoeCwJhlmwTjkXBY5Pn/ZHw==}
     dev: true
 
-  /@types/validator@13.7.17:
-    resolution: {integrity: sha512-aqayTNmeWrZcvnG2MG9eGYI6b7S5fl+yKgPs6bAjOTwPS316R5SxBGKvtSExfyoJU7pIeHJfsHI0Ji41RVMkvQ==}
+  /@types/validator@13.11.1:
+    resolution: {integrity: sha512-d/MUkJYdOeKycmm75Arql4M5+UuXmf4cHdHKsyw1GcvnNgL6s77UkgSgJ8TE/rI5PYsnwYq5jkcWBLuN/MpQ1A==}
     dev: false
 
   /@vitest/expect@0.34.3:
