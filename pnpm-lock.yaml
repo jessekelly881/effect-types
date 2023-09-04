@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.17.5
     version: 0.17.6
   '@effect/match':
-    specifier: ^0.34.0
-    version: 0.34.0(@effect/data@0.17.6)
+    specifier: ^0.35.0
+    version: 0.35.0(@effect/data@0.17.6)
   '@effect/schema':
     specifier: ^0.33.2
     version: 0.33.2(@effect/data@0.17.6)(@effect/io@0.38.2)
@@ -273,8 +273,8 @@ packages:
       '@effect/data': 0.17.6
     dev: false
 
-  /@effect/match@0.34.0(@effect/data@0.17.6):
-    resolution: {integrity: sha512-3fPqDT81rOU+83s84dx7Dh8pMtBq6BE+FGxq5U6FB48IeUdr35jayeuIXe6ZGQC6YorM3GJny6XYO5gOy0AAow==}
+  /@effect/match@0.35.0(@effect/data@0.17.6):
+    resolution: {integrity: sha512-UXnwAHqXb+xElWTsSJPnFSGzhnI7t+iPmy8tJ50nWXrdhZKL/H7rrpist5Q4WbFohjP6cBCKf3w0HMEJHmgBXw==}
     peerDependencies:
       '@effect/data': ^0.17.1
     dependencies:

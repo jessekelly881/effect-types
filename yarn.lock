@@ -240,10 +240,10 @@
   resolved "https://registry.yarnpkg.com/@effect/io/-/io-0.38.2.tgz#6acbae5ea7e1dcca55766718a9fc4d14a184773b"
   integrity sha512-rnAXFo9BDLbY7DgQE1e8uP/sEniyVCsB7gNs+yXPu0XK9s4kaGinH6XgwYRDBuu7Fu1tQ1yd7JoAdEb7yutNRg==
 
-"@effect/match@^0.34.0":
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/@effect/match/-/match-0.34.0.tgz#02ae9cea4b305d6b8dd22035fcef994109f1ffc0"
-  integrity sha512-3fPqDT81rOU+83s84dx7Dh8pMtBq6BE+FGxq5U6FB48IeUdr35jayeuIXe6ZGQC6YorM3GJny6XYO5gOy0AAow==
+"@effect/match@^0.35.0":
+  version "0.35.0"
+  resolved "https://registry.yarnpkg.com/@effect/match/-/match-0.35.0.tgz#645c04ad8990feb98df7450bf8baf38bab281eaa"
+  integrity sha512-UXnwAHqXb+xElWTsSJPnFSGzhnI7t+iPmy8tJ50nWXrdhZKL/H7rrpist5Q4WbFohjP6cBCKf3w0HMEJHmgBXw==
 
 "@effect/printer@^0.13.0":
   version "0.13.0"
