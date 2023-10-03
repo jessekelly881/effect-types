@@ -138,11 +138,13 @@ I.HttpMethod // GET, PATCH, ...
 I.Protocol // http | https
 I.MagnetURI
 I.IPv4
+I.IPv6
 
 // filters
 pipe(S.number. I.port())
 pipe(S.string. I.magnetUri())
 pipe(S.string. I.ipv4())
+pipe(S.string. I.ipv6())
 ```
 
 ### Location
