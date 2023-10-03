@@ -13,7 +13,7 @@ A collection of types, and helpers for @effect/schema organized by data type. De
 ```ts
 import * as B from "effect-types/dist/Boolean";
 import * as S from "@effect/schema/Schema";
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 B.FuzzyBoolean // true | false , 0 | 1 , yes | no , on | off
 
@@ -25,7 +25,7 @@ pipe(S.string, B.fuzzyBoolean())
 ```ts
 import * as N from "effect-types/dist/Number";
 import * as S from "@effect/schema/Schema";
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 // data types
 N.U8 // Schema<number, number & Brand<"U8">>
@@ -59,7 +59,7 @@ pipe(S.number, N.negativeInt())
 ```ts
 import * as Str from "effect-types/dist/String";
 import * as S from "@effect/schema/Schema";
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 // data types
 Str.Ascii 
@@ -83,7 +83,7 @@ pipe(S.string, Str.slug())
 ```ts
 import * as C from "effect-types/dist/Color";
 import * as S from "@effect/schema/Schema";
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 // data types
 C.HexColor
@@ -97,7 +97,7 @@ pipe(S.string, C.hexColor())
 ```ts
 import * as F from "effect-types/dist/Finance";
 import * as S from "@effect/schema/Schema";
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 // data types
 F.BIC // Business Identifier Codes (BIC)
@@ -116,7 +116,7 @@ pipe(S.string, F.bitcoinAddress())
 ```ts
 import * as H from "effect-types/dist/Hash";
 import * as S from "@effect/schema/Schema";
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 // data types
 H.MD5
@@ -130,7 +130,7 @@ pipe(S.string, H.md5())
 ```ts
 import * as I from "effect-types/dist/Internet";
 import * as S from "@effect/schema/Schema";
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 // data types
 I.Port
@@ -150,7 +150,7 @@ pipe(S.string. I.ipv4())
 ```ts
 import * as L from "effect-types/dist/Location";
 import * as S from "@effect/schema/Schema";
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 // data types
 L.Longitude

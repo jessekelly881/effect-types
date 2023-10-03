@@ -1,5 +1,5 @@
 import * as S from "@effect/schema/Schema";
-import { identity, pipe } from "@effect/data/Function";
+import { identity, pipe } from "effect/Function";
 import * as Fake from "effect-schema-compilers/dist/faker";
 
 

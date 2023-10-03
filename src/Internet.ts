@@ -1,7 +1,7 @@
 import * as S from "@effect/schema/Schema";
 import { u8 } from "./Number";
 import * as Fake from "effect-schema-compilers/dist/faker";
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 
 /**

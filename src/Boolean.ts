@@ -1,8 +1,8 @@
 import * as S from "@effect/schema/Schema";
-import * as A from "@effect/data/ReadonlyArray";
-import * as Str from "@effect/data/String";
+import * as A from "effect/ReadonlyArray";
+import * as Str from "effect/String";
 import * as PR from "@effect/schema/ParseResult"
-import { pipe } from "@effect/data/Function";
+import { pipe } from "effect/Function";
 
 
 const truthyValues = ["1", "true", "yes", "on", "ok"];
@@ -13,7 +13,7 @@ const falsyValues = ["0", "false", "no", "off"];
  * @since 1.0.0 
  */
 export const fuzzyBoolean = () => <I>(self: S.Schema<I, string>): S.Schema<I, boolean> => {
-  const schema: S.Schema<I, boolean> = S.transformResult(
+  const schema: S.Schema<I, boolean> = S.transformOrFail(
     self,
     S.boolean,
     (s) => {

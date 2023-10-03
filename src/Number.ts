@@ -1,5 +1,5 @@
 import * as S from "@effect/schema/Schema";
-import { flow, pipe } from "@effect/data/Function";
+import { flow, pipe } from "effect/Function";
 
 
 const unsignedMax = (n: number) => 2 ** n - 1;

@@ -39,11 +39,10 @@
     "vitest": "^0.31.4"
   },
   "dependencies": {
-    "@effect/data": "^0.17.5",
     "@effect/match": "^0.34.0",
-    "@effect/schema": "^0.33.2",
+    "@effect/schema": "^0.39.2",
     "@types/validator": "^13.7.17",
-    "effect-http": "^0.25.0",
+    "effect": "2.0.0-next.42",
     "effect-schema-compilers": "^0.0.18"
   }
 }
