@@ -128,3 +128,48 @@ export const IPv4 = pipe(
  * @since 1.0.0
  */
 export type IPv4 = S.Schema.To<typeof IPv4>
+
+
+
+const IPv6SegmentFormat = '(?:[0-9a-fA-F]{1,4})';
+const IPv6AddressRegExp = new RegExp('^(' +
+  `(?:${IPv6SegmentFormat}:){7}(?:${IPv6SegmentFormat}|:)|` +
+  `(?:${IPv6SegmentFormat}:){6}(?:${IPv4AddressFormat}|:${IPv6SegmentFormat}|:)|` +
+  `(?:${IPv6SegmentFormat}:){5}(?::${IPv4AddressFormat}|(:${IPv6SegmentFormat}){1,2}|:)|` +
+  `(?:${IPv6SegmentFormat}:){4}(?:(:${IPv6SegmentFormat}){0,1}:${IPv4AddressFormat}|(:${IPv6SegmentFormat}){1,3}|:)|` +
+  `(?:${IPv6SegmentFormat}:){3}(?:(:${IPv6SegmentFormat}){0,2}:${IPv4AddressFormat}|(:${IPv6SegmentFormat}){1,4}|:)|` +
+  `(?:${IPv6SegmentFormat}:){2}(?:(:${IPv6SegmentFormat}){0,3}:${IPv4AddressFormat}|(:${IPv6SegmentFormat}){1,5}|:)|` +
+  `(?:${IPv6SegmentFormat}:){1}(?:(:${IPv6SegmentFormat}){0,4}:${IPv4AddressFormat}|(:${IPv6SegmentFormat}){1,6}|:)|` +
+  `(?::((?::${IPv6SegmentFormat}){0,5}:${IPv4AddressFormat}|(?::${IPv6SegmentFormat}){1,7}|:))` +
+  ')(%[0-9a-zA-Z-.:]{1,})?$');
+
+/**
+ * An ipv4 address
+ * @category datatypes
+ * @since 1.0.0
+ */
+export const ipv6 = (annotations?: S.FilterAnnotations<string>) => S.pattern(IPv6AddressRegExp, {
+    message: () => `an ipv6 address`,
+    identifier: "IPv6",
+    description: `An ipv6 address`,
+    ...annotations
+});
+
+/**
+ * An ipv4 address
+ * @category datatypes
+ * @since 1.0.0
+ */
+export const IPv6 = pipe(
+    S.string, 
+    ipv6(), 
+    Fake.faker(f => f.internet.ipv6()),
+    S.identifier("IPv6"), 
+    S.brand("IPv6")
+);
+
+/**
+ * @category brands
+ * @since 1.0.0
+ */
+export type IPv6 = S.Schema.To<typeof IPv6>
