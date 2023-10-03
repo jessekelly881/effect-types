@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@effect/match':
     specifier: ^0.37.0
@@ -15,7 +19,7 @@ dependencies:
     version: 2.0.0-next.42
   effect-schema-compilers:
     specifier: ^0.0.19
-    version: 0.0.19
+    version: 0.0.19(@effect/data@0.17.6)(@effect/io@0.38.2)
 
 devDependencies:
   '@changesets/cli':
@@ -23,7 +27,7 @@ devDependencies:
     version: 2.26.0
   '@faker-js/faker':
     specifier: ^8.0.2
-    version: 8.0.2
+    version: 8.1.0
   fast-check:
     specifier: ^3.7.1
     version: 3.12.0
@@ -258,6 +262,14 @@ packages:
     resolution: {integrity: sha512-/vwz7Jh05eS0qY8kczR/YyJd18d0C+PMtUkAealh4f6gwvhABLGCnktNJTcq/+UHxY0Cbv18r5uaJ4+7PPC+WQ==}
     dev: false
 
+  /@effect/io@0.38.2(@effect/data@0.17.6):
+    resolution: {integrity: sha512-rnAXFo9BDLbY7DgQE1e8uP/sEniyVCsB7gNs+yXPu0XK9s4kaGinH6XgwYRDBuu7Fu1tQ1yd7JoAdEb7yutNRg==}
+    peerDependencies:
+      '@effect/data': ^0.17.1
+    dependencies:
+      '@effect/data': 0.17.6
+    dev: false
+
   /@effect/match@0.37.0(effect@2.0.0-next.42):
     resolution: {integrity: sha512-Nm7qhO3KTSdey8y5hPNDtXeegUnTPg1ro0esf39A1VdF24sFpMSM/bnSxTgGk42mmor/HImiav20+pBsVLaI6A==}
     peerDependencies:
@@ -266,13 +278,15 @@ packages:
       effect: 2.0.0-next.42
     dev: false
 
-  /@effect/printer@0.13.0(@effect/typeclass@0.3.0):
+  /@effect/printer@0.13.0(@effect/data@0.17.6)(@effect/io@0.38.2)(@effect/typeclass@0.3.0):
     resolution: {integrity: sha512-vqKilbg36AEHZJNj9fiV6qUALojR2kVePKbuJJAkaGQao9Duc6rL3QSbaGEaEzar6v68j6TGTOndg/inI2bQFA==}
     peerDependencies:
       '@effect/data': ~0.17.1
       '@effect/io': ~0.38.0
       '@effect/typeclass': ~0.3.0
     dependencies:
+      '@effect/data': 0.17.6
+      '@effect/io': 0.38.2(@effect/data@0.17.6)
       '@effect/typeclass': 0.3.0
     dev: false
 
@@ -687,10 +701,9 @@ packages:
     dev: true
     optional: true
 
-  /@faker-js/faker@8.0.2:
-    resolution: {integrity: sha512-Uo3pGspElQW91PCvKSIAXoEgAUlRnH29sX2/p89kg7sP1m2PzCufHINd0FhTXQf6DYGiUlVncdSPa2F9wxed2A==}
+  /@faker-js/faker@8.1.0:
+    resolution: {integrity: sha512-38DT60rumHfBYynif3lmtxMqMqmsOQIxQgEuPZxCk2yUYN0eqWpTACgxi0VpidvsJB8CRxCpvP7B3anK85FjtQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
-    requiresBuild: true
     dev: true
 
   /@jridgewell/sourcemap-codec@1.4.15:
@@ -1211,10 +1224,10 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /effect-schema-compilers@0.0.19:
+  /effect-schema-compilers@0.0.19(@effect/data@0.17.6)(@effect/io@0.38.2):
     resolution: {integrity: sha512-s/gv7G+O4m2ZYfazlEmVqpZs64QPABurS88JGYJRlJr/2QMk+wiO3st0cBtaDI6x2kpQN4roMWYiAVQPO1zCew==}
     dependencies:
-      '@effect/printer': 0.13.0(@effect/typeclass@0.3.0)
+      '@effect/printer': 0.13.0(@effect/data@0.17.6)(@effect/io@0.38.2)(@effect/typeclass@0.3.0)
       '@effect/schema': 0.39.2(effect@2.0.0-next.42)
       '@effect/typeclass': 0.3.0
       effect: 2.0.0-next.42
@@ -3208,7 +3221,3 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
