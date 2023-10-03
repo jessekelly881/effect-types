@@ -1,5 +1,12 @@
 # @kellyjesse881/empty
 
+## 0.0.8
+
+### Patch Changes
+
+- 729cbf9: chore: updated effect-schema-compilers
+- fe6939a: updated effect deps
+
 ## 0.0.7
 
 ### Patch Changes
