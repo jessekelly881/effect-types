@@ -9,7 +9,7 @@ import { pipe } from "effect/Function";
  * @category datatypes
  * @since 1.0.0
  */
-export const port = (annotations?: S.AnnotationOptions<number>) => u8({
+export const port = (annotations?: S.FilterAnnotations<number>) => u8({
     message: () => `a port number`,
     identifier: "Port",
     description: `A port number`,
@@ -72,7 +72,7 @@ const magnetURIRegex = /(?:^magnet:\?|[^?&]&)xt(?:\.1)?=urn:(?:(?:aich|bitprint|
  * @category datatypes
  * @since 1.0.0
  */
-export const magnetUri = (annotations?: S.AnnotationOptions<string>) => S.pattern(magnetURIRegex, {
+export const magnetUri = (annotations?: S.FilterAnnotations<string>) => S.pattern(magnetURIRegex, {
     message: () => `a magnet uri`,
     identifier: "MagnetURI",
     description: `A magnet uri`,
@@ -103,7 +103,7 @@ const IPv4AddressRegExp = new RegExp(`^${IPv4AddressFormat}$`);
  * @category datatypes
  * @since 1.0.0
  */
-export const ipv4 = (annotations?: S.AnnotationOptions<string>) => S.pattern(IPv4AddressRegExp, {
+export const ipv4 = (annotations?: S.FilterAnnotations<string>) => S.pattern(IPv4AddressRegExp, {
     message: () => `an ipv4 address`,
     identifier: "IPv4",
     description: `An ipv4 address`,

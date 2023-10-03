@@ -6,7 +6,7 @@ const unsignedMax = (n: number) => 2 ** n - 1;
 const signedMin = (n: number) => -(2 ** (n - 1));
 const signedMax = (n: number) => 2 ** (n - 1) - 1;
 
-const u = (n: number) => (annotations?: S.AnnotationOptions<number>) =>
+const u = (n: number) => (annotations?: S.FilterAnnotations<number>) =>
   flow(
     S.int(),
     S.between(0, unsignedMax(n), {
@@ -17,7 +17,7 @@ const u = (n: number) => (annotations?: S.AnnotationOptions<number>) =>
     })
   );
 
-const i = (n: number) => (annotations?: S.AnnotationOptions<number>) =>
+const i = (n: number) => (annotations?: S.FilterAnnotations<number>) =>
   flow(
     S.int(),
     S.between(signedMin(n), signedMax(n), {
@@ -210,7 +210,7 @@ export type I64 = S.Schema.To<typeof I64>
  * @category filters
  * @since 1.0.0
  */
-export const safe = (annotations?: S.AnnotationOptions<number>) => S.between(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, {
+export const safe = (annotations?: S.FilterAnnotations<number>) => S.between(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER, {
 	identifier: 'Safe',
 	...annotations
 });
