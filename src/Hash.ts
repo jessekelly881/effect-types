@@ -24,4 +24,4 @@ export const MD5 = S.string.pipe(md5(), S.brand("MD5"));
  * @since 1.0.0
  * @category brand
  */
-export type MD5 = S.To<typeof MD5>
+export type MD5 = S.Schema.To<typeof MD5>

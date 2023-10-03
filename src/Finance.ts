@@ -33,7 +33,7 @@ export const BIC = pipe(
  * @category brands
  * @since 1.0.0
  */
-export type BIC = S.To<typeof BIC>
+export type BIC = S.Schema.To<typeof BIC>
 
 
 
@@ -62,7 +62,7 @@ export const EthereumAddress = pipe(
  * @category brands
  * @since 1.0.0
  */
-export type EthereumAddress = S.To<typeof EthereumAddress>
+export type EthereumAddress = S.Schema.To<typeof EthereumAddress>
 
 
 
@@ -93,7 +93,7 @@ export const BitcoinAddress = pipe(
  * @category brands
  * @since 1.0.0
  */
-export type BitcoinAddress = S.To<typeof BitcoinAddress>
+export type BitcoinAddress = S.Schema.To<typeof BitcoinAddress>
 
 
 
@@ -131,4 +131,4 @@ export const CreditCardNumber = pipe(
  * @category brands
  * @since 1.0.0
  */
-export type CreditCardNumber = S.To<typeof CreditCardNumber>
+export type CreditCardNumber = S.Schema.To<typeof CreditCardNumber>

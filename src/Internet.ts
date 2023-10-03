@@ -27,7 +27,7 @@ export const Port = pipe(S.number, port(), S.brand("Port"));
  * @category brands
  * @since 1.0.0
  */
-export type Port = S.To<typeof Port>
+export type Port = S.Schema.To<typeof Port>
 
 
 
@@ -44,7 +44,7 @@ export const HttpMethod = pipe(
  * @category brands
  * @since 1.0.0
  */
-export type HttpMethod = S.To<typeof HttpMethod>
+export type HttpMethod = S.Schema.To<typeof HttpMethod>
 
 
 
@@ -61,7 +61,7 @@ export const Protocol = pipe(
  * @category brands
  * @since 1.0.0
  */
-export type Protocol = S.To<typeof Protocol>
+export type Protocol = S.Schema.To<typeof Protocol>
 
 
 
@@ -90,7 +90,7 @@ export const MagnetURI = pipe(S.string, magnetUri(), S.brand("MagnetURI"));
  * @category brands
  * @since 1.0.0
  */
-export type MagnetURI = S.To<typeof MagnetURI>
+export type MagnetURI = S.Schema.To<typeof MagnetURI>
 
 
 
@@ -127,4 +127,4 @@ export const IPv4 = pipe(
  * @category brands
  * @since 1.0.0
  */
-export type IPv4 = S.To<typeof IPv4>
+export type IPv4 = S.Schema.To<typeof IPv4>

@@ -18,7 +18,7 @@ export const Latitude = pipe(S.number, latitude, S.brand("Latitude"))
  * @category brands
  * @since 1.0.0
  */
-export type Latitude = S.To<typeof Latitude>
+export type Latitude = S.Schema.To<typeof Latitude>
 
 
 
@@ -38,4 +38,4 @@ export const Longitude = pipe(S.number, longitude, S.brand("Longitude"))
  * @category brands
  * @since 1.0.0
  */
-export type Longitude = S.To<typeof Longitude>
+export type Longitude = S.Schema.To<typeof Longitude>

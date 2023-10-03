@@ -22,4 +22,4 @@ export const HexColor = pipe(S.string, hexColor(), S.brand("HexColor"));
  * @since 1.0.0
  * @category brand
  */
-export type HexColor = S.To<typeof HexColor>
+export type HexColor = S.Schema.To<typeof HexColor>

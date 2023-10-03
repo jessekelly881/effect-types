@@ -47,7 +47,7 @@ export const U8 = pipe(S.number, u8(), S.brand("U8"));
  * @category brands
  * @since 1.0.0
  */
-export type U8 = S.To<typeof U8>
+export type U8 = S.Schema.To<typeof U8>
 
 
 
@@ -69,7 +69,7 @@ export const U16 = pipe(S.number, u16(), S.brand("U16"));
  * @category brands
  * @since 1.0.0
  */
-export type U16 = S.To<typeof U16>
+export type U16 = S.Schema.To<typeof U16>
 
 
 
@@ -91,7 +91,7 @@ export const U32 = pipe(S.number, u32(), S.brand("U32"));
  * @category brands
  * @since 1.0.0
  */
-export type U32 = S.To<typeof U32>
+export type U32 = S.Schema.To<typeof U32>
 
 
 
@@ -113,7 +113,7 @@ export const U64 = pipe(S.number, u64(), S.brand("U64"));
  * @category brands
  * @since 1.0.0
  */
-export type U64 = S.To<typeof U64>
+export type U64 = S.Schema.To<typeof U64>
 
 
 
@@ -135,7 +135,7 @@ export const I8 = pipe(S.number, i8(), S.brand("I8"));
  * @category brands
  * @since 1.0.0
  */
-export type I8 = S.To<typeof I8>
+export type I8 = S.Schema.To<typeof I8>
 
 
 
@@ -157,7 +157,7 @@ export const I16 = pipe(S.number, i16(), S.brand("I16"));
  * @category brands
  * @since 1.0.0
  */
-export type I16 = S.To<typeof I16>
+export type I16 = S.Schema.To<typeof I16>
 
 
 
@@ -179,7 +179,7 @@ export const I32 = pipe(S.number, i32(), S.brand("I32"));
  * @category brands
  * @since 1.0.0
  */
-export type I32 = S.To<typeof I32>
+export type I32 = S.Schema.To<typeof I32>
 
 
 
@@ -201,7 +201,7 @@ export const I64 = pipe(S.number, i64(), S.brand("I64"));
  * @category brands
  * @since 1.0.0
  */
-export type I64 = S.To<typeof I64>
+export type I64 = S.Schema.To<typeof I64>
 
 
 
@@ -226,7 +226,7 @@ export const Safe = pipe(S.number, safe(), S.brand("Safe"))
  * @category brands
  * @since 1.0.0
  */
-export type Safe = S.To<typeof Safe>
+export type Safe = S.Schema.To<typeof Safe>
 
 
 
@@ -246,7 +246,7 @@ export const PositiveInt = pipe(S.number, positiveInt, S.brand("PositiveInt"))
  * @category brands
  * @since 1.0.0
  */
-export type PositiveInt = S.To<typeof PositiveInt>
+export type PositiveInt = S.Schema.To<typeof PositiveInt>
 
 
 
@@ -266,7 +266,7 @@ export const NegativeInt = pipe(S.number, negativeInt, S.brand("NegativeInt"))
  * @category brands
  * @since 1.0.0
  */
-export type NegativeInt = S.To<typeof NegativeInt>
+export type NegativeInt = S.Schema.To<typeof NegativeInt>
 
 export const NumberFromBoolean = S.transform(
   S.boolean,

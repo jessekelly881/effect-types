@@ -24,7 +24,7 @@ export const Ascii = pipe(S.string, ascii(), S.brand("Ascii"));
  * @since 1.0.0
  * @category brand
  */
-export type Ascii = S.To<typeof Ascii>
+export type Ascii = S.Schema.To<typeof Ascii>
 
 
 
@@ -53,7 +53,7 @@ export const Hexadecimal = pipe(
  * @since 1.0.0
  * @category brand
  */
-export type Hexadecimal = S.To<typeof Hexadecimal>
+export type Hexadecimal = S.Schema.To<typeof Hexadecimal>
 
 
 
@@ -82,7 +82,7 @@ export const Octal = pipe(
  * @since 1.0.0
  * @category brand
  */
-export type Octal = S.To<typeof Octal>
+export type Octal = S.Schema.To<typeof Octal>
 
 
 const semVerRegex = multilineRegexp([
@@ -118,7 +118,7 @@ export const SemVer = pipe(
  * @since 1.0.0
  * @category brand
  */
-export type SemVer = S.To<typeof SemVer>
+export type SemVer = S.Schema.To<typeof SemVer>
 
 
 const cronRegex = /^((((\d+,)+\d+|(\d+(\/|-|#)\d+)|\d+L?|\*(\/\d+)?|L(-\d+)?|\?|[A-Z]{3}(-[A-Z]{3})?) ?){5,7})$|(@(annually|yearly|monthly|weekly|daily|hourly|reboot))|(@every (\d+(ns|us|µs|ms|s|m|h))+)/
@@ -150,7 +150,7 @@ export const Cron = pipe(
  * @since 1.0.0
  * @category brand
  */
-export type Cron = S.To<typeof Cron>
+export type Cron = S.Schema.To<typeof Cron>
 
 
 
@@ -183,4 +183,4 @@ export const Slug = pipe(
  * @since 1.0.0
  * @category brand
  */
-export type Slug = S.To<typeof Slug>
+export type Slug = S.Schema.To<typeof Slug>

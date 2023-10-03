@@ -11,4 +11,4 @@ export const Sex = S.literal("male", "female")
  * @category brands
  * @since 1.0.0
  */
-export type Sex = S.To<typeof Sex>
+export type Sex = S.Schema.To<typeof Sex>
