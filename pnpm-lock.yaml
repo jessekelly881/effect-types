@@ -36,10 +36,10 @@ devDependencies:
     version: 8.0.3
   tsup:
     specifier: ^7.2.0
-    version: 7.2.0(typescript@5.0.4)
+    version: 7.2.0(typescript@5.2.2)
   typescript:
     specifier: ^5.0.4
-    version: 5.0.4
+    version: 5.2.2
   vitest:
     specifier: ^0.31.4
     version: 0.31.4
@@ -1211,7 +1211,7 @@ packages:
       '@effect/typeclass': 0.10.0(effect@2.0.0-next.48)
       effect: 2.0.0-next.48
       fast-check: 3.13.1
-      typescript: 5.0.4
+      typescript: 5.2.2
     dev: false
 
   /effect@2.0.0-next.48:
@@ -2786,7 +2786,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /tsup@7.2.0(typescript@5.0.4):
+  /tsup@7.2.0(typescript@5.2.2):
     resolution: {integrity: sha512-vDHlczXbgUvY3rWvqFEbSqmC1L7woozbzngMqTtL2PGBODTtWlRwGDDawhvWzr5c1QjKe4OAKqJGfE1xeXUvtQ==}
     engines: {node: '>=16.14'}
     hasBin: true
@@ -2816,7 +2816,7 @@ packages:
       source-map: 0.8.0-beta.0
       sucrase: 3.29.0
       tree-kill: 1.2.2
-      typescript: 5.0.4
+      typescript: 5.2.2
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -2864,9 +2864,9 @@ packages:
       is-typed-array: 1.1.10
     dev: true
 
-  /typescript@5.0.4:
-    resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
-    engines: {node: '>=12.20'}
+  /typescript@5.2.2:
+    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
+    engines: {node: '>=14.17'}
     hasBin: true
 
   /ufo@1.1.2:
