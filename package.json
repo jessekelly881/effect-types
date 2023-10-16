@@ -40,9 +40,9 @@
   },
   "dependencies": {
     "@effect/match": "^0.37.0",
-    "@effect/schema": "^0.39.2",
+    "@effect/schema": "^0.43.2",
     "@types/validator": "^13.7.17",
-    "effect": "2.0.0-next.42",
-    "effect-schema-compilers": "^0.0.19"
+    "effect": "2.0.0-next.48",
+    "effect-schema-compilers": "^0.0.21"
   }
 }

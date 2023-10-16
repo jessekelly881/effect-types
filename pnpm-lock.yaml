@@ -3,19 +3,19 @@ lockfileVersion: '6.0'
 dependencies:
   '@effect/match':
     specifier: ^0.37.0
-    version: 0.37.0(effect@2.0.0-next.42)
+    version: 0.37.0(effect@2.0.0-next.48)
   '@effect/schema':
-    specifier: ^0.39.2
-    version: 0.39.2(effect@2.0.0-next.42)
+    specifier: ^0.43.2
+    version: 0.43.2(effect@2.0.0-next.48)(fast-check@3.12.0)
   '@types/validator':
     specifier: ^13.7.17
     version: 13.7.17
   effect:
-    specifier: 2.0.0-next.42
-    version: 2.0.0-next.42
+    specifier: 2.0.0-next.48
+    version: 2.0.0-next.48
   effect-schema-compilers:
-    specifier: ^0.0.19
-    version: 0.0.19
+    specifier: ^0.0.21
+    version: 0.0.21
 
 devDependencies:
   '@changesets/cli':
@@ -254,41 +254,40 @@ packages:
       prettier: 2.8.4
     dev: true
 
-  /@effect/data@0.17.6:
-    resolution: {integrity: sha512-/vwz7Jh05eS0qY8kczR/YyJd18d0C+PMtUkAealh4f6gwvhABLGCnktNJTcq/+UHxY0Cbv18r5uaJ4+7PPC+WQ==}
-    dev: false
-
-  /@effect/match@0.37.0(effect@2.0.0-next.42):
+  /@effect/match@0.37.0(effect@2.0.0-next.48):
     resolution: {integrity: sha512-Nm7qhO3KTSdey8y5hPNDtXeegUnTPg1ro0esf39A1VdF24sFpMSM/bnSxTgGk42mmor/HImiav20+pBsVLaI6A==}
     peerDependencies:
       effect: 2.0.0-next.42
     dependencies:
-      effect: 2.0.0-next.42
+      effect: 2.0.0-next.48
     dev: false
 
-  /@effect/printer@0.13.0(@effect/typeclass@0.3.0):
-    resolution: {integrity: sha512-vqKilbg36AEHZJNj9fiV6qUALojR2kVePKbuJJAkaGQao9Duc6rL3QSbaGEaEzar6v68j6TGTOndg/inI2bQFA==}
+  /@effect/schema@0.43.2(effect@2.0.0-next.48)(fast-check@3.12.0):
+    resolution: {integrity: sha512-xXmRYsL/ykbrMeP+7HYx3O2xAfaa64VJQiPW+ml8xbP2QDAZbOO1uedSqHkIMK3Xzh49KLR4JprR1vGPf4EZ9A==}
     peerDependencies:
-      '@effect/data': ~0.17.1
-      '@effect/io': ~0.38.0
-      '@effect/typeclass': ~0.3.0
+      effect: 2.0.0-next.48
+      fast-check: ^3.13.1
     dependencies:
-      '@effect/typeclass': 0.3.0
-    dev: false
-
-  /@effect/schema@0.39.2(effect@2.0.0-next.42):
-    resolution: {integrity: sha512-UolykyRtrg+JHflZBfHK2p+w8IgP8u6kSkTq9VIggure12/2CFvlib9vphw4fJCN8cRd3gZo4LevU4FfS+ZLxw==}
-    peerDependencies:
-      effect: ^2.0.0-next.39
-    dependencies:
-      effect: 2.0.0-next.42
+      effect: 2.0.0-next.48
       fast-check: 3.12.0
     dev: false
 
-  /@effect/typeclass@0.3.0:
-    resolution: {integrity: sha512-eg91Dfpx8FqXIoq4DDVuY/wl+92K89HEgtwVcScRu7QAsp64QzkFpmNgHKPyA3tzT7ku+cV16NdoDId58sJgiQ==}
+  /@effect/schema@0.43.2(effect@2.0.0-next.48)(fast-check@3.13.1):
+    resolution: {integrity: sha512-xXmRYsL/ykbrMeP+7HYx3O2xAfaa64VJQiPW+ml8xbP2QDAZbOO1uedSqHkIMK3Xzh49KLR4JprR1vGPf4EZ9A==}
+    peerDependencies:
+      effect: 2.0.0-next.48
+      fast-check: ^3.13.1
     dependencies:
-      '@effect/data': 0.17.6
+      effect: 2.0.0-next.48
+      fast-check: 3.13.1
+    dev: false
+
+  /@effect/typeclass@0.10.0(effect@2.0.0-next.48):
+    resolution: {integrity: sha512-pELnCfLZMKU8I/ax/2ciVIIuRX22NJaSriToOS/QekCW5twK2COVDJYsTGPEDdJ86nth5/W0rt0wUZf0mjwxWQ==}
+    peerDependencies:
+      effect: 2.0.0-next.48
+    dependencies:
+      effect: 2.0.0-next.48
     dev: false
 
   /@esbuild/android-arm64@0.17.11:
@@ -1211,22 +1210,18 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /effect-schema-compilers@0.0.19:
-    resolution: {integrity: sha512-s/gv7G+O4m2ZYfazlEmVqpZs64QPABurS88JGYJRlJr/2QMk+wiO3st0cBtaDI6x2kpQN4roMWYiAVQPO1zCew==}
+  /effect-schema-compilers@0.0.21:
+    resolution: {integrity: sha512-ztgnq5A+jwLbLmRPGXaZaW14Z7VcNAKZ/x4rT2XTT4CmhUk3XeuvPe+Gz4M7WjTOwBflEYpL1o6HKN93IPtgRQ==}
     dependencies:
-      '@effect/printer': 0.13.0(@effect/typeclass@0.3.0)
-      '@effect/schema': 0.39.2(effect@2.0.0-next.42)
-      '@effect/typeclass': 0.3.0
-      effect: 2.0.0-next.42
+      '@effect/schema': 0.43.2(effect@2.0.0-next.48)(fast-check@3.13.1)
+      '@effect/typeclass': 0.10.0(effect@2.0.0-next.48)
+      effect: 2.0.0-next.48
       fast-check: 3.13.1
       typescript: 5.0.4
-    transitivePeerDependencies:
-      - '@effect/data'
-      - '@effect/io'
     dev: false
 
-  /effect@2.0.0-next.42:
-    resolution: {integrity: sha512-ydeSVYDmX70CPyUmZ12SNEQZrzynBmzmxm8An4kl3Bpw8GPbZhkpjb0z41+6vBKiuIAhko3icspLy71qIAytEA==}
+  /effect@2.0.0-next.48:
+    resolution: {integrity: sha512-vwMIl39m8fMBeXoGIdSwMi2lrg7NltyrGMK0N/liGDl7G9LXvERKOCipNcobSIGO0V7hjaXEWgL6W/KEWEww+g==}
     dev: false
 
   /emoji-regex@8.0.0:
