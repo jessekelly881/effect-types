@@ -1,12 +1,16 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@effect/match':
     specifier: ^0.37.0
     version: 0.37.0(effect@2.0.0-next.48)
   '@effect/schema':
     specifier: ^0.43.2
-    version: 0.43.2(effect@2.0.0-next.48)(fast-check@3.12.0)
+    version: 0.43.2(effect@2.0.0-next.48)(fast-check@3.13.1)
   '@types/validator':
     specifier: ^13.7.17
     version: 13.7.17
@@ -26,7 +30,7 @@ devDependencies:
     version: 8.0.2
   fast-check:
     specifier: ^3.7.1
-    version: 3.12.0
+    version: 3.13.1
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -260,16 +264,6 @@ packages:
       effect: 2.0.0-next.42
     dependencies:
       effect: 2.0.0-next.48
-    dev: false
-
-  /@effect/schema@0.43.2(effect@2.0.0-next.48)(fast-check@3.12.0):
-    resolution: {integrity: sha512-xXmRYsL/ykbrMeP+7HYx3O2xAfaa64VJQiPW+ml8xbP2QDAZbOO1uedSqHkIMK3Xzh49KLR4JprR1vGPf4EZ9A==}
-    peerDependencies:
-      effect: 2.0.0-next.48
-      fast-check: ^3.13.1
-    dependencies:
-      effect: 2.0.0-next.48
-      fast-check: 3.12.0
     dev: false
 
   /@effect/schema@0.43.2(effect@2.0.0-next.48)(fast-check@3.13.1):
@@ -1414,18 +1408,11 @@ packages:
       tmp: 0.0.33
     dev: true
 
-  /fast-check@3.12.0:
-    resolution: {integrity: sha512-SqahE9mlL3+lhjJ39joMLwcj6F+24hfZdf/tchlNO8sHcTdrUUdA5P/ZbSFZM9Xpzs36XaneGwE0FWepm/zyOA==}
-    engines: {node: '>=8.0.0'}
-    dependencies:
-      pure-rand: 6.0.1
-
   /fast-check@3.13.1:
     resolution: {integrity: sha512-Xp00tFuWd83i8rbG/4wU54qU+yINjQha7bXH2N4ARNTkyOimzHtUBJ5+htpdXk7RMaCOD/j2jxSjEt9u9ZPNeQ==}
     engines: {node: '>=8.0.0'}
     dependencies:
       pure-rand: 6.0.1
-    dev: false
 
   /fast-diff@1.3.0:
     resolution: {integrity: sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==}
@@ -3203,7 +3190,3 @@ packages:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
