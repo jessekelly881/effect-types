@@ -10,7 +10,7 @@ dependencies:
     version: 0.37.0(effect@2.0.0-next.48)
   '@effect/schema':
     specifier: ^0.43.2
-    version: 0.43.2(effect@2.0.0-next.48)(fast-check@3.13.1)
+    version: 0.43.2(effect@2.0.0-next.48)(fast-check@3.14.0)
   '@types/validator':
     specifier: ^13.7.17
     version: 13.7.17
@@ -30,7 +30,7 @@ devDependencies:
     version: 8.0.2
   fast-check:
     specifier: ^3.7.1
-    version: 3.13.1
+    version: 3.14.0
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -266,14 +266,14 @@ packages:
       effect: 2.0.0-next.48
     dev: false
 
-  /@effect/schema@0.43.2(effect@2.0.0-next.48)(fast-check@3.13.1):
+  /@effect/schema@0.43.2(effect@2.0.0-next.48)(fast-check@3.14.0):
     resolution: {integrity: sha512-xXmRYsL/ykbrMeP+7HYx3O2xAfaa64VJQiPW+ml8xbP2QDAZbOO1uedSqHkIMK3Xzh49KLR4JprR1vGPf4EZ9A==}
     peerDependencies:
       effect: 2.0.0-next.48
       fast-check: ^3.13.1
     dependencies:
       effect: 2.0.0-next.48
-      fast-check: 3.13.1
+      fast-check: 3.14.0
     dev: false
 
   /@effect/typeclass@0.10.0(effect@2.0.0-next.48):
@@ -1207,10 +1207,10 @@ packages:
   /effect-schema-compilers@0.0.21:
     resolution: {integrity: sha512-ztgnq5A+jwLbLmRPGXaZaW14Z7VcNAKZ/x4rT2XTT4CmhUk3XeuvPe+Gz4M7WjTOwBflEYpL1o6HKN93IPtgRQ==}
     dependencies:
-      '@effect/schema': 0.43.2(effect@2.0.0-next.48)(fast-check@3.13.1)
+      '@effect/schema': 0.43.2(effect@2.0.0-next.48)(fast-check@3.14.0)
       '@effect/typeclass': 0.10.0(effect@2.0.0-next.48)
       effect: 2.0.0-next.48
-      fast-check: 3.13.1
+      fast-check: 3.14.0
       typescript: 5.0.4
     dev: false
 
@@ -1408,8 +1408,8 @@ packages:
       tmp: 0.0.33
     dev: true
 
-  /fast-check@3.13.1:
-    resolution: {integrity: sha512-Xp00tFuWd83i8rbG/4wU54qU+yINjQha7bXH2N4ARNTkyOimzHtUBJ5+htpdXk7RMaCOD/j2jxSjEt9u9ZPNeQ==}
+  /fast-check@3.14.0:
+    resolution: {integrity: sha512-9Z0zqASzDNjXBox/ileV/fd+4P+V/f3o4shM6QawvcdLFh8yjPG4h5BrHUZ8yzY6amKGDTAmRMyb/JZqe+dCgw==}
     engines: {node: '>=8.0.0'}
     dependencies:
       pure-rand: 6.0.1
