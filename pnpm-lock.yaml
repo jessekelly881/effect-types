@@ -13,7 +13,7 @@ dependencies:
     version: 0.43.2(effect@2.0.0-next.48)(fast-check@3.13.1)
   '@types/validator':
     specifier: ^13.7.17
-    version: 13.7.17
+    version: 13.11.8
   effect:
     specifier: 2.0.0-next.48
     version: 2.0.0-next.48
@@ -763,8 +763,8 @@ packages:
     resolution: {integrity: sha512-KQf+QAMWKMrtBMsB8/24w53tEsxllMj6TuA80TT/5igJalLI/zm0L3oXRbIAl4Ohfc85gyHX/jhMwsVkmhLU4A==}
     dev: true
 
-  /@types/validator@13.7.17:
-    resolution: {integrity: sha512-aqayTNmeWrZcvnG2MG9eGYI6b7S5fl+yKgPs6bAjOTwPS316R5SxBGKvtSExfyoJU7pIeHJfsHI0Ji41RVMkvQ==}
+  /@types/validator@13.11.8:
+    resolution: {integrity: sha512-c/hzNDBh7eRF+KbCf+OoZxKbnkpaK/cKp9iLQWqB7muXtM+MtL9SUUH8vCFcLn6dH1Qm05jiexK0ofWY7TfOhQ==}
     dev: false
 
   /@vitest/expect@0.31.4:
